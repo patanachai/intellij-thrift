@@ -22,12 +22,6 @@ public class ThriftDefinitionNameImpl extends ThriftPsiCompositeElementImpl impl
     else super.accept(visitor);
   }
 
-  @Override
-  @NotNull
-  public PsiElement getIdentifier() {
-    return findNotNullChildByType(IDENTIFIER);
-  }
-
   @NotNull
   public PsiElement setName(String name) {
     return ThriftPsiUtil.setName(this, name);

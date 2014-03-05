@@ -17,15 +17,15 @@ public class ThriftEnumFieldsImpl extends ThriftPsiCompositeElementImpl implemen
     super(node);
   }
 
-  public void accept(@NotNull PsiElementVisitor visitor) {
-    if (visitor instanceof ThriftVisitor) ((ThriftVisitor)visitor).visitEnumFields(this);
-    else super.accept(visitor);
-  }
-
   @Override
   @NotNull
   public List<ThriftEnumField> getEnumFieldList() {
     return PsiTreeUtil.getChildrenOfTypeAsList(this, ThriftEnumField.class);
+  }
+
+  public void accept(@NotNull PsiElementVisitor visitor) {
+    if (visitor instanceof ThriftVisitor) ((ThriftVisitor)visitor).visitEnumFields(this);
+    else super.accept(visitor);
   }
 
 }

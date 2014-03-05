@@ -10,7 +10,4 @@ public interface ThriftSemunField extends ThriftPsiCompositeElement {
   @Nullable
   ThriftListSeparator getListSeparator();
 
-  @NotNull
-  PsiElement getLiteral();
-
 }

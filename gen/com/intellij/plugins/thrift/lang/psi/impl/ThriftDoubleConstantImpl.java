@@ -22,10 +22,4 @@ public class ThriftDoubleConstantImpl extends ThriftPsiCompositeElementImpl impl
     else super.accept(visitor);
   }
 
-  @Override
-  @NotNull
-  public PsiElement getNumber() {
-    return findNotNullChildByType(NUMBER);
-  }
-
 }

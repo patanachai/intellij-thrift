@@ -17,11 +17,6 @@ public class ThriftFieldTypeImpl extends ThriftPsiCompositeElementImpl implement
     super(node);
   }
 
-  public void accept(@NotNull PsiElementVisitor visitor) {
-    if (visitor instanceof ThriftVisitor) ((ThriftVisitor)visitor).visitFieldType(this);
-    else super.accept(visitor);
-  }
-
   @Override
   @Nullable
   public ThriftBaseType getBaseType() {
@@ -50,6 +45,11 @@ public class ThriftFieldTypeImpl extends ThriftPsiCompositeElementImpl implement
   @Nullable
   public ThriftSetType getSetType() {
     return findChildByClass(ThriftSetType.class);
+  }
+
+  public void accept(@NotNull PsiElementVisitor visitor) {
+    if (visitor instanceof ThriftVisitor) ((ThriftVisitor)visitor).visitFieldType(this);
+    else super.accept(visitor);
   }
 
 }

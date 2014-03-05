@@ -7,7 +7,4 @@ import com.intellij.psi.PsiElement;
 
 public interface ThriftServiceSuperName extends ThriftPsiCompositeElement {
 
-  @NotNull
-  PsiElement getIdentifier();
-
 }

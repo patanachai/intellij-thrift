@@ -17,15 +17,15 @@ public class ThriftFunctionTypeImpl extends ThriftPsiCompositeElementImpl implem
     super(node);
   }
 
-  public void accept(@NotNull PsiElementVisitor visitor) {
-    if (visitor instanceof ThriftVisitor) ((ThriftVisitor)visitor).visitFunctionType(this);
-    else super.accept(visitor);
-  }
-
   @Override
   @Nullable
   public ThriftFieldType getFieldType() {
     return findChildByClass(ThriftFieldType.class);
+  }
+
+  public void accept(@NotNull PsiElementVisitor visitor) {
+    if (visitor instanceof ThriftVisitor) ((ThriftVisitor)visitor).visitFunctionType(this);
+    else super.accept(visitor);
   }
 
 }

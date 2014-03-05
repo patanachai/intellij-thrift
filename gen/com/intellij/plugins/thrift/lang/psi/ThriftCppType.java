@@ -7,7 +7,4 @@ import com.intellij.psi.PsiElement;
 
 public interface ThriftCppType extends ThriftPsiCompositeElement {
 
-  @Nullable
-  PsiElement getLiteral();
-
 }

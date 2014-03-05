@@ -17,11 +17,6 @@ public class ThriftEnumFieldImpl extends ThriftPsiCompositeElementImpl implement
     super(node);
   }
 
-  public void accept(@NotNull PsiElementVisitor visitor) {
-    if (visitor instanceof ThriftVisitor) ((ThriftVisitor)visitor).visitEnumField(this);
-    else super.accept(visitor);
-  }
-
   @Override
   @Nullable
   public ThriftIntConstant getIntConstant() {
@@ -40,10 +35,9 @@ public class ThriftEnumFieldImpl extends ThriftPsiCompositeElementImpl implement
     return findChildByClass(ThriftTypeAnnotations.class);
   }
 
-  @Override
-  @NotNull
-  public PsiElement getIdentifier() {
-    return findNotNullChildByType(IDENTIFIER);
+  public void accept(@NotNull PsiElementVisitor visitor) {
+    if (visitor instanceof ThriftVisitor) ((ThriftVisitor)visitor).visitEnumField(this);
+    else super.accept(visitor);
   }
 
 }

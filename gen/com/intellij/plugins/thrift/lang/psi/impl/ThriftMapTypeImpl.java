@@ -17,11 +17,6 @@ public class ThriftMapTypeImpl extends ThriftPsiCompositeElementImpl implements 
     super(node);
   }
 
-  public void accept(@NotNull PsiElementVisitor visitor) {
-    if (visitor instanceof ThriftVisitor) ((ThriftVisitor)visitor).visitMapType(this);
-    else super.accept(visitor);
-  }
-
   @Override
   @Nullable
   public ThriftCppType getCppType() {
@@ -32,6 +27,11 @@ public class ThriftMapTypeImpl extends ThriftPsiCompositeElementImpl implements 
   @NotNull
   public List<ThriftFieldType> getFieldTypeList() {
     return PsiTreeUtil.getChildrenOfTypeAsList(this, ThriftFieldType.class);
+  }
+
+  public void accept(@NotNull PsiElementVisitor visitor) {
+    if (visitor instanceof ThriftVisitor) ((ThriftVisitor)visitor).visitMapType(this);
+    else super.accept(visitor);
   }
 
 }

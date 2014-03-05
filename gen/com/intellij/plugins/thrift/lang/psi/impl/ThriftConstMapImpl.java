@@ -17,11 +17,6 @@ public class ThriftConstMapImpl extends ThriftPsiCompositeElementImpl implements
     super(node);
   }
 
-  public void accept(@NotNull PsiElementVisitor visitor) {
-    if (visitor instanceof ThriftVisitor) ((ThriftVisitor)visitor).visitConstMap(this);
-    else super.accept(visitor);
-  }
-
   @Override
   @NotNull
   public List<ThriftConstValue> getConstValueList() {
@@ -32,6 +27,11 @@ public class ThriftConstMapImpl extends ThriftPsiCompositeElementImpl implements
   @NotNull
   public List<ThriftListSeparator> getListSeparatorList() {
     return PsiTreeUtil.getChildrenOfTypeAsList(this, ThriftListSeparator.class);
+  }
+
+  public void accept(@NotNull PsiElementVisitor visitor) {
+    if (visitor instanceof ThriftVisitor) ((ThriftVisitor)visitor).visitConstMap(this);
+    else super.accept(visitor);
   }
 
 }

@@ -17,15 +17,15 @@ public class ThriftSenumBodyImpl extends ThriftPsiCompositeElementImpl implement
     super(node);
   }
 
-  public void accept(@NotNull PsiElementVisitor visitor) {
-    if (visitor instanceof ThriftVisitor) ((ThriftVisitor)visitor).visitSenumBody(this);
-    else super.accept(visitor);
-  }
-
   @Override
   @NotNull
   public List<ThriftSemunField> getSemunFieldList() {
     return PsiTreeUtil.getChildrenOfTypeAsList(this, ThriftSemunField.class);
+  }
+
+  public void accept(@NotNull PsiElementVisitor visitor) {
+    if (visitor instanceof ThriftVisitor) ((ThriftVisitor)visitor).visitSenumBody(this);
+    else super.accept(visitor);
   }
 
 }

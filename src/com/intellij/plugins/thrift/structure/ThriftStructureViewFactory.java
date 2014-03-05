@@ -36,6 +36,12 @@ public class ThriftStructureViewFactory implements PsiStructureViewFactory {
         return new ThriftStructureViewModel(psiFile);
       }
 
+      @NotNull
+      @Override
+      public StructureViewModel createStructureViewModel() {
+        return new ThriftStructureViewModel(psiFile);
+      }
+
       @Override
       public boolean isRootNodeShown() {
         return false;

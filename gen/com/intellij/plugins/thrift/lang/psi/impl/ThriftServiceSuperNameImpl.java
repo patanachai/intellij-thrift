@@ -22,10 +22,4 @@ public class ThriftServiceSuperNameImpl extends ThriftPsiCompositeElementImpl im
     else super.accept(visitor);
   }
 
-  @Override
-  @NotNull
-  public PsiElement getIdentifier() {
-    return findNotNullChildByType(IDENTIFIER);
-  }
-
 }

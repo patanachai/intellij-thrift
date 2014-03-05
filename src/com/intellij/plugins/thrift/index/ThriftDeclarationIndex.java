@@ -78,7 +78,6 @@ public class ThriftDeclarationIndex extends ScalarIndexExtension<String> {
           return true;
         }
       },
-      scope,
       null
     );
     return result;

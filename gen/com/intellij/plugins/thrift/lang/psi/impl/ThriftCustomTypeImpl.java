@@ -23,12 +23,6 @@ public class ThriftCustomTypeImpl extends ThriftPsiCompositeElementImpl implemen
     else super.accept(visitor);
   }
 
-  @Override
-  @NotNull
-  public PsiElement getIdentifier() {
-    return findNotNullChildByType(IDENTIFIER);
-  }
-
   @NotNull
   public PsiReference[] getReferences() {
     return ThriftPsiUtil.getReferences(this);

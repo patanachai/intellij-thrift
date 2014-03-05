@@ -85,7 +85,6 @@ public class ThriftSubDeclarationIndex extends FileBasedIndexExtension<String, S
           return true;
         }
       },
-      scope,
       null
     );
     return result;

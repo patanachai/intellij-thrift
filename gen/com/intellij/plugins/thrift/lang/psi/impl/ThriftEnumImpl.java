@@ -17,11 +17,6 @@ public class ThriftEnumImpl extends ThriftTopLevelDeclarationImpl implements Thr
     super(node);
   }
 
-  public void accept(@NotNull PsiElementVisitor visitor) {
-    if (visitor instanceof ThriftVisitor) ((ThriftVisitor)visitor).visitEnum(this);
-    else super.accept(visitor);
-  }
-
   @Override
   @Nullable
   public ThriftDefinitionName getDefinitionName() {
@@ -38,6 +33,11 @@ public class ThriftEnumImpl extends ThriftTopLevelDeclarationImpl implements Thr
   @Nullable
   public ThriftEnumFields getEnumFields() {
     return findChildByClass(ThriftEnumFields.class);
+  }
+
+  public void accept(@NotNull PsiElementVisitor visitor) {
+    if (visitor instanceof ThriftVisitor) ((ThriftVisitor)visitor).visitEnum(this);
+    else super.accept(visitor);
   }
 
 }

@@ -17,15 +17,15 @@ public class ThriftTypeAnnotationsImpl extends ThriftPsiCompositeElementImpl imp
     super(node);
   }
 
-  public void accept(@NotNull PsiElementVisitor visitor) {
-    if (visitor instanceof ThriftVisitor) ((ThriftVisitor)visitor).visitTypeAnnotations(this);
-    else super.accept(visitor);
-  }
-
   @Override
   @NotNull
   public ThriftTypeAnnotationList getTypeAnnotationList() {
     return findNotNullChildByClass(ThriftTypeAnnotationList.class);
+  }
+
+  public void accept(@NotNull PsiElementVisitor visitor) {
+    if (visitor instanceof ThriftVisitor) ((ThriftVisitor)visitor).visitTypeAnnotations(this);
+    else super.accept(visitor);
   }
 
 }

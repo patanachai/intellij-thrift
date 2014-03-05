@@ -1,6 +1,8 @@
 // This is a generated file. Not intended for manual editing.
 package com.intellij.plugins.thrift.lang.parser;
 
+import org.jetbrains.annotations.*;
+import com.intellij.lang.LighterASTNode;
 import com.intellij.lang.PsiBuilder;
 import com.intellij.lang.PsiBuilder.Marker;
 import com.intellij.openapi.diagnostic.Logger;
@@ -14,145 +16,149 @@ import com.intellij.lang.PsiParser;
 @SuppressWarnings({"SimplifiableIfStatement", "UnusedAssignment"})
 public class ThriftParser implements PsiParser {
 
-  public static final Logger LOG_ = Logger.getInstance("com.intellij.plugins.thrift.lang.parser.ThriftParser");
+  public static Logger LOG_ = Logger.getInstance("com.intellij.plugins.thrift.lang.parser.ThriftParser");
 
+  @NotNull
   public ASTNode parse(IElementType root_, PsiBuilder builder_) {
+    int level_ = 0;
     boolean result_;
-    builder_ = adapt_builder_(root_, builder_, this, null);
-    Marker marker_ = enter_section_(builder_, 0, _COLLAPSE_, null);
+    builder_ = adapt_builder_(root_, builder_, this);
     if (root_ == BASE_TYPE) {
-      result_ = BaseType(builder_, 0);
+      result_ = BaseType(builder_, level_ + 1);
     }
     else if (root_ == CONST) {
-      result_ = Const(builder_, 0);
+      result_ = Const(builder_, level_ + 1);
     }
     else if (root_ == CONST_LIST) {
-      result_ = ConstList(builder_, 0);
+      result_ = ConstList(builder_, level_ + 1);
     }
     else if (root_ == CONST_MAP) {
-      result_ = ConstMap(builder_, 0);
+      result_ = ConstMap(builder_, level_ + 1);
     }
     else if (root_ == CONST_VALUE) {
-      result_ = ConstValue(builder_, 0);
+      result_ = ConstValue(builder_, level_ + 1);
     }
     else if (root_ == CPP_TYPE) {
-      result_ = CppType(builder_, 0);
+      result_ = CppType(builder_, level_ + 1);
     }
     else if (root_ == CUSTOM_TYPE) {
-      result_ = CustomType(builder_, 0);
+      result_ = CustomType(builder_, level_ + 1);
     }
     else if (root_ == DEFINITION_NAME) {
-      result_ = DefinitionName(builder_, 0);
+      result_ = DefinitionName(builder_, level_ + 1);
     }
     else if (root_ == DOUBLE_CONSTANT) {
-      result_ = DoubleConstant(builder_, 0);
+      result_ = DoubleConstant(builder_, level_ + 1);
     }
     else if (root_ == ENUM) {
-      result_ = Enum(builder_, 0);
+      result_ = Enum(builder_, level_ + 1);
     }
     else if (root_ == EXCEPTION) {
-      result_ = Exception(builder_, 0);
+      result_ = Exception(builder_, level_ + 1);
     }
     else if (root_ == FIELD) {
-      result_ = Field(builder_, 0);
+      result_ = Field(builder_, level_ + 1);
     }
     else if (root_ == FIELD_ID) {
-      result_ = FieldID(builder_, 0);
+      result_ = FieldID(builder_, level_ + 1);
     }
     else if (root_ == FIELD_REQ) {
-      result_ = FieldReq(builder_, 0);
+      result_ = FieldReq(builder_, level_ + 1);
     }
     else if (root_ == FIELD_TYPE) {
-      result_ = FieldType(builder_, 0);
+      result_ = FieldType(builder_, level_ + 1);
     }
     else if (root_ == FUNCTION) {
-      result_ = Function(builder_, 0);
+      result_ = Function(builder_, level_ + 1);
     }
     else if (root_ == FUNCTION_TYPE) {
-      result_ = FunctionType(builder_, 0);
+      result_ = FunctionType(builder_, level_ + 1);
     }
     else if (root_ == INCLUDE) {
-      result_ = Include(builder_, 0);
+      result_ = Include(builder_, level_ + 1);
     }
     else if (root_ == INT_CONSTANT) {
-      result_ = IntConstant(builder_, 0);
+      result_ = IntConstant(builder_, level_ + 1);
     }
     else if (root_ == LIST_SEPARATOR) {
-      result_ = ListSeparator(builder_, 0);
+      result_ = ListSeparator(builder_, level_ + 1);
     }
     else if (root_ == LIST_TYPE) {
-      result_ = ListType(builder_, 0);
+      result_ = ListType(builder_, level_ + 1);
     }
     else if (root_ == MAP_TYPE) {
-      result_ = MapType(builder_, 0);
+      result_ = MapType(builder_, level_ + 1);
     }
     else if (root_ == NAMESPACE) {
-      result_ = Namespace(builder_, 0);
+      result_ = Namespace(builder_, level_ + 1);
     }
     else if (root_ == NAMESPACE_SCOPE) {
-      result_ = NamespaceScope(builder_, 0);
+      result_ = NamespaceScope(builder_, level_ + 1);
     }
     else if (root_ == SENUM) {
-      result_ = Senum(builder_, 0);
+      result_ = Senum(builder_, level_ + 1);
     }
     else if (root_ == SERVICE) {
-      result_ = Service(builder_, 0);
+      result_ = Service(builder_, level_ + 1);
     }
     else if (root_ == SERVICE_SUPER_NAME) {
-      result_ = ServiceSuperName(builder_, 0);
+      result_ = ServiceSuperName(builder_, level_ + 1);
     }
     else if (root_ == SET_TYPE) {
-      result_ = SetType(builder_, 0);
+      result_ = SetType(builder_, level_ + 1);
     }
     else if (root_ == STRUCT) {
-      result_ = Struct(builder_, 0);
+      result_ = Struct(builder_, level_ + 1);
     }
     else if (root_ == THROWS) {
-      result_ = Throws(builder_, 0);
+      result_ = Throws(builder_, level_ + 1);
     }
     else if (root_ == TYPE_ANNOTATION) {
-      result_ = TypeAnnotation(builder_, 0);
+      result_ = TypeAnnotation(builder_, level_ + 1);
     }
     else if (root_ == TYPE_ANNOTATION_LIST) {
-      result_ = TypeAnnotationList(builder_, 0);
+      result_ = TypeAnnotationList(builder_, level_ + 1);
     }
     else if (root_ == TYPE_ANNOTATIONS) {
-      result_ = TypeAnnotations(builder_, 0);
+      result_ = TypeAnnotations(builder_, level_ + 1);
     }
     else if (root_ == TYPEDEF) {
-      result_ = Typedef(builder_, 0);
+      result_ = Typedef(builder_, level_ + 1);
     }
     else if (root_ == UNION) {
-      result_ = Union(builder_, 0);
+      result_ = Union(builder_, level_ + 1);
     }
     else if (root_ == XSD_ATTRS) {
-      result_ = XsdAttrs(builder_, 0);
+      result_ = XsdAttrs(builder_, level_ + 1);
     }
     else if (root_ == XSD_FIELD_OPTIONS) {
-      result_ = XsdFieldOptions(builder_, 0);
+      result_ = XsdFieldOptions(builder_, level_ + 1);
     }
     else if (root_ == ENUM_FIELD) {
-      result_ = enumField(builder_, 0);
+      result_ = enumField(builder_, level_ + 1);
     }
     else if (root_ == ENUM_FIELDS) {
-      result_ = enumFields(builder_, 0);
+      result_ = enumFields(builder_, level_ + 1);
     }
     else if (root_ == FIELDS) {
-      result_ = fields(builder_, 0);
+      result_ = fields(builder_, level_ + 1);
     }
     else if (root_ == SEMUN_FIELD) {
-      result_ = semunField(builder_, 0);
+      result_ = semunField(builder_, level_ + 1);
     }
     else if (root_ == SENUM_BODY) {
-      result_ = senumBody(builder_, 0);
+      result_ = senumBody(builder_, level_ + 1);
     }
     else if (root_ == SERVICE_BODY) {
-      result_ = serviceBody(builder_, 0);
+      result_ = serviceBody(builder_, level_ + 1);
     }
     else {
-      result_ = parse_root_(root_, builder_, 0);
+      Marker marker_ = builder_.mark();
+      enterErrorRecordingSection(builder_, level_, _SECTION_RECOVER_, null);
+      result_ = parse_root_(root_, builder_, level_);
+      exitErrorRecordingSection(builder_, level_, result_, true, _SECTION_RECOVER_, TOKEN_ADVANCER);
+      marker_.done(root_);
     }
-    exit_section_(builder_, 0, marker_, root_, result_, true, TRUE_CONDITION);
     return builder_.getTreeBuilt();
   }
 
@@ -165,7 +171,8 @@ public class ThriftParser implements PsiParser {
   public static boolean BaseType(PsiBuilder builder_, int level_) {
     if (!recursion_guard_(builder_, level_, "BaseType")) return false;
     boolean result_ = false;
-    Marker marker_ = enter_section_(builder_, level_, _NONE_, "<base type>");
+    Marker marker_ = builder_.mark();
+    enterErrorRecordingSection(builder_, level_, _SECTION_GENERAL_, "<base type>");
     result_ = consumeToken(builder_, "bool");
     if (!result_) result_ = consumeToken(builder_, "byte");
     if (!result_) result_ = consumeToken(builder_, "i16");
@@ -175,7 +182,13 @@ public class ThriftParser implements PsiParser {
     if (!result_) result_ = consumeToken(builder_, "string");
     if (!result_) result_ = consumeToken(builder_, "binary");
     if (!result_) result_ = consumeToken(builder_, "slist");
-    exit_section_(builder_, level_, marker_, BASE_TYPE, result_, false, null);
+    if (result_) {
+      marker_.done(BASE_TYPE);
+    }
+    else {
+      marker_.rollbackTo();
+    }
+    result_ = exitErrorRecordingSection(builder_, level_, result_, false, _SECTION_GENERAL_, null);
     return result_;
   }
 
@@ -185,7 +198,8 @@ public class ThriftParser implements PsiParser {
     if (!recursion_guard_(builder_, level_, "Const")) return false;
     boolean result_ = false;
     boolean pinned_ = false;
-    Marker marker_ = enter_section_(builder_, level_, _NONE_, "<const>");
+    Marker marker_ = builder_.mark();
+    enterErrorRecordingSection(builder_, level_, _SECTION_GENERAL_, "<const>");
     result_ = consumeToken(builder_, "const");
     pinned_ = result_; // pin = 1
     result_ = result_ && report_error_(builder_, FieldType(builder_, level_ + 1));
@@ -193,7 +207,13 @@ public class ThriftParser implements PsiParser {
     result_ = pinned_ && report_error_(builder_, consumeToken(builder_, EQUALS)) && result_;
     result_ = pinned_ && report_error_(builder_, ConstValue(builder_, level_ + 1)) && result_;
     result_ = pinned_ && Const_5(builder_, level_ + 1) && result_;
-    exit_section_(builder_, level_, marker_, CONST, result_, pinned_, null);
+    if (result_ || pinned_) {
+      marker_.done(CONST);
+    }
+    else {
+      marker_.rollbackTo();
+    }
+    result_ = exitErrorRecordingSection(builder_, level_, result_, pinned_, _SECTION_GENERAL_, null);
     return result_ || pinned_;
   }
 
@@ -210,22 +230,31 @@ public class ThriftParser implements PsiParser {
     if (!recursion_guard_(builder_, level_, "ConstList")) return false;
     if (!nextTokenIs(builder_, LEFTBRACKET)) return false;
     boolean result_ = false;
-    Marker marker_ = enter_section_(builder_);
+    Marker marker_ = builder_.mark();
     result_ = consumeToken(builder_, LEFTBRACKET);
     result_ = result_ && ConstList_1(builder_, level_ + 1);
     result_ = result_ && consumeToken(builder_, RIGHTBRACKET);
-    exit_section_(builder_, marker_, CONST_LIST, result_);
+    if (result_) {
+      marker_.done(CONST_LIST);
+    }
+    else {
+      marker_.rollbackTo();
+    }
     return result_;
   }
 
   // (ConstValue ListSeparator?)*
   private static boolean ConstList_1(PsiBuilder builder_, int level_) {
     if (!recursion_guard_(builder_, level_, "ConstList_1")) return false;
-    int pos_ = current_position_(builder_);
+    int offset_ = builder_.getCurrentOffset();
     while (true) {
       if (!ConstList_1_0(builder_, level_ + 1)) break;
-      if (!empty_element_parsed_guard_(builder_, "ConstList_1", pos_)) break;
-      pos_ = current_position_(builder_);
+      int next_offset_ = builder_.getCurrentOffset();
+      if (offset_ == next_offset_) {
+        empty_element_parsed_guard_(builder_, offset_, "ConstList_1");
+        break;
+      }
+      offset_ = next_offset_;
     }
     return true;
   }
@@ -234,10 +263,15 @@ public class ThriftParser implements PsiParser {
   private static boolean ConstList_1_0(PsiBuilder builder_, int level_) {
     if (!recursion_guard_(builder_, level_, "ConstList_1_0")) return false;
     boolean result_ = false;
-    Marker marker_ = enter_section_(builder_);
+    Marker marker_ = builder_.mark();
     result_ = ConstValue(builder_, level_ + 1);
     result_ = result_ && ConstList_1_0_1(builder_, level_ + 1);
-    exit_section_(builder_, marker_, null, result_);
+    if (!result_) {
+      marker_.rollbackTo();
+    }
+    else {
+      marker_.drop();
+    }
     return result_;
   }
 
@@ -254,22 +288,31 @@ public class ThriftParser implements PsiParser {
     if (!recursion_guard_(builder_, level_, "ConstMap")) return false;
     if (!nextTokenIs(builder_, LEFTCURLYBRACE)) return false;
     boolean result_ = false;
-    Marker marker_ = enter_section_(builder_);
+    Marker marker_ = builder_.mark();
     result_ = consumeToken(builder_, LEFTCURLYBRACE);
     result_ = result_ && ConstMap_1(builder_, level_ + 1);
     result_ = result_ && consumeToken(builder_, RIGHTCURLYBRACE);
-    exit_section_(builder_, marker_, CONST_MAP, result_);
+    if (result_) {
+      marker_.done(CONST_MAP);
+    }
+    else {
+      marker_.rollbackTo();
+    }
     return result_;
   }
 
   // (ConstValue ':' ConstValue ListSeparator?)*
   private static boolean ConstMap_1(PsiBuilder builder_, int level_) {
     if (!recursion_guard_(builder_, level_, "ConstMap_1")) return false;
-    int pos_ = current_position_(builder_);
+    int offset_ = builder_.getCurrentOffset();
     while (true) {
       if (!ConstMap_1_0(builder_, level_ + 1)) break;
-      if (!empty_element_parsed_guard_(builder_, "ConstMap_1", pos_)) break;
-      pos_ = current_position_(builder_);
+      int next_offset_ = builder_.getCurrentOffset();
+      if (offset_ == next_offset_) {
+        empty_element_parsed_guard_(builder_, offset_, "ConstMap_1");
+        break;
+      }
+      offset_ = next_offset_;
     }
     return true;
   }
@@ -278,12 +321,17 @@ public class ThriftParser implements PsiParser {
   private static boolean ConstMap_1_0(PsiBuilder builder_, int level_) {
     if (!recursion_guard_(builder_, level_, "ConstMap_1_0")) return false;
     boolean result_ = false;
-    Marker marker_ = enter_section_(builder_);
+    Marker marker_ = builder_.mark();
     result_ = ConstValue(builder_, level_ + 1);
     result_ = result_ && consumeToken(builder_, COLON);
     result_ = result_ && ConstValue(builder_, level_ + 1);
     result_ = result_ && ConstMap_1_0_3(builder_, level_ + 1);
-    exit_section_(builder_, marker_, null, result_);
+    if (!result_) {
+      marker_.rollbackTo();
+    }
+    else {
+      marker_.drop();
+    }
     return result_;
   }
 
@@ -299,14 +347,21 @@ public class ThriftParser implements PsiParser {
   public static boolean ConstValue(PsiBuilder builder_, int level_) {
     if (!recursion_guard_(builder_, level_, "ConstValue")) return false;
     boolean result_ = false;
-    Marker marker_ = enter_section_(builder_, level_, _NONE_, "<const value>");
+    Marker marker_ = builder_.mark();
+    enterErrorRecordingSection(builder_, level_, _SECTION_GENERAL_, "<const value>");
     result_ = IntConstant(builder_, level_ + 1);
     if (!result_) result_ = DoubleConstant(builder_, level_ + 1);
     if (!result_) result_ = consumeToken(builder_, LITERAL);
     if (!result_) result_ = consumeToken(builder_, IDENTIFIER);
     if (!result_) result_ = ConstList(builder_, level_ + 1);
     if (!result_) result_ = ConstMap(builder_, level_ + 1);
-    exit_section_(builder_, level_, marker_, CONST_VALUE, result_, false, null);
+    if (result_) {
+      marker_.done(CONST_VALUE);
+    }
+    else {
+      marker_.rollbackTo();
+    }
+    result_ = exitErrorRecordingSection(builder_, level_, result_, false, _SECTION_GENERAL_, null);
     return result_;
   }
 
@@ -315,11 +370,16 @@ public class ThriftParser implements PsiParser {
   static boolean ContainerType(PsiBuilder builder_, int level_) {
     if (!recursion_guard_(builder_, level_, "ContainerType")) return false;
     boolean result_ = false;
-    Marker marker_ = enter_section_(builder_);
+    Marker marker_ = builder_.mark();
     result_ = MapType(builder_, level_ + 1);
     if (!result_) result_ = SetType(builder_, level_ + 1);
     if (!result_) result_ = ListType(builder_, level_ + 1);
-    exit_section_(builder_, marker_, null, result_);
+    if (!result_) {
+      marker_.rollbackTo();
+    }
+    else {
+      marker_.drop();
+    }
     return result_;
   }
 
@@ -329,11 +389,18 @@ public class ThriftParser implements PsiParser {
     if (!recursion_guard_(builder_, level_, "CppType")) return false;
     boolean result_ = false;
     boolean pinned_ = false;
-    Marker marker_ = enter_section_(builder_, level_, _NONE_, "<cpp type>");
+    Marker marker_ = builder_.mark();
+    enterErrorRecordingSection(builder_, level_, _SECTION_GENERAL_, "<cpp type>");
     result_ = consumeToken(builder_, "cpp_type");
     pinned_ = result_; // pin = 1
     result_ = result_ && consumeToken(builder_, LITERAL);
-    exit_section_(builder_, level_, marker_, CPP_TYPE, result_, pinned_, null);
+    if (result_ || pinned_) {
+      marker_.done(CPP_TYPE);
+    }
+    else {
+      marker_.rollbackTo();
+    }
+    result_ = exitErrorRecordingSection(builder_, level_, result_, pinned_, _SECTION_GENERAL_, null);
     return result_ || pinned_;
   }
 
@@ -343,9 +410,14 @@ public class ThriftParser implements PsiParser {
     if (!recursion_guard_(builder_, level_, "CustomType")) return false;
     if (!nextTokenIs(builder_, IDENTIFIER)) return false;
     boolean result_ = false;
-    Marker marker_ = enter_section_(builder_);
+    Marker marker_ = builder_.mark();
     result_ = consumeToken(builder_, IDENTIFIER);
-    exit_section_(builder_, marker_, CUSTOM_TYPE, result_);
+    if (result_) {
+      marker_.done(CUSTOM_TYPE);
+    }
+    else {
+      marker_.rollbackTo();
+    }
     return result_;
   }
 
@@ -355,9 +427,14 @@ public class ThriftParser implements PsiParser {
     if (!recursion_guard_(builder_, level_, "DefinitionName")) return false;
     if (!nextTokenIs(builder_, IDENTIFIER)) return false;
     boolean result_ = false;
-    Marker marker_ = enter_section_(builder_);
+    Marker marker_ = builder_.mark();
     result_ = consumeToken(builder_, IDENTIFIER);
-    exit_section_(builder_, marker_, DEFINITION_NAME, result_);
+    if (result_) {
+      marker_.done(DEFINITION_NAME);
+    }
+    else {
+      marker_.rollbackTo();
+    }
     return result_;
   }
 
@@ -365,11 +442,15 @@ public class ThriftParser implements PsiParser {
   // topLevelElement*
   static boolean Document(PsiBuilder builder_, int level_) {
     if (!recursion_guard_(builder_, level_, "Document")) return false;
-    int pos_ = current_position_(builder_);
+    int offset_ = builder_.getCurrentOffset();
     while (true) {
       if (!topLevelElement(builder_, level_ + 1)) break;
-      if (!empty_element_parsed_guard_(builder_, "Document", pos_)) break;
-      pos_ = current_position_(builder_);
+      int next_offset_ = builder_.getCurrentOffset();
+      if (offset_ == next_offset_) {
+        empty_element_parsed_guard_(builder_, offset_, "Document");
+        break;
+      }
+      offset_ = next_offset_;
     }
     return true;
   }
@@ -379,10 +460,17 @@ public class ThriftParser implements PsiParser {
   public static boolean DoubleConstant(PsiBuilder builder_, int level_) {
     if (!recursion_guard_(builder_, level_, "DoubleConstant")) return false;
     boolean result_ = false;
-    Marker marker_ = enter_section_(builder_, level_, _NONE_, "<double constant>");
+    Marker marker_ = builder_.mark();
+    enterErrorRecordingSection(builder_, level_, _SECTION_GENERAL_, "<double constant>");
     result_ = DoubleConstant_0(builder_, level_ + 1);
     result_ = result_ && consumeToken(builder_, NUMBER);
-    exit_section_(builder_, level_, marker_, DOUBLE_CONSTANT, result_, false, null);
+    if (result_) {
+      marker_.done(DOUBLE_CONSTANT);
+    }
+    else {
+      marker_.rollbackTo();
+    }
+    result_ = exitErrorRecordingSection(builder_, level_, result_, false, _SECTION_GENERAL_, null);
     return result_;
   }
 
@@ -397,10 +485,15 @@ public class ThriftParser implements PsiParser {
   private static boolean DoubleConstant_0_0(PsiBuilder builder_, int level_) {
     if (!recursion_guard_(builder_, level_, "DoubleConstant_0_0")) return false;
     boolean result_ = false;
-    Marker marker_ = enter_section_(builder_);
+    Marker marker_ = builder_.mark();
     result_ = consumeToken(builder_, PLUS);
     if (!result_) result_ = consumeToken(builder_, MINUS);
-    exit_section_(builder_, marker_, null, result_);
+    if (!result_) {
+      marker_.rollbackTo();
+    }
+    else {
+      marker_.drop();
+    }
     return result_;
   }
 
@@ -410,7 +503,8 @@ public class ThriftParser implements PsiParser {
     if (!recursion_guard_(builder_, level_, "Enum")) return false;
     boolean result_ = false;
     boolean pinned_ = false;
-    Marker marker_ = enter_section_(builder_, level_, _NONE_, "<enum>");
+    Marker marker_ = builder_.mark();
+    enterErrorRecordingSection(builder_, level_, _SECTION_GENERAL_, "<enum>");
     result_ = consumeToken(builder_, "enum");
     pinned_ = result_; // pin = 1
     result_ = result_ && report_error_(builder_, DefinitionName(builder_, level_ + 1));
@@ -418,7 +512,13 @@ public class ThriftParser implements PsiParser {
     result_ = pinned_ && report_error_(builder_, enumFields(builder_, level_ + 1)) && result_;
     result_ = pinned_ && report_error_(builder_, consumeToken(builder_, RIGHTCURLYBRACE)) && result_;
     result_ = pinned_ && Enum_5(builder_, level_ + 1) && result_;
-    exit_section_(builder_, level_, marker_, ENUM, result_, pinned_, null);
+    if (result_ || pinned_) {
+      marker_.done(ENUM);
+    }
+    else {
+      marker_.rollbackTo();
+    }
+    result_ = exitErrorRecordingSection(builder_, level_, result_, pinned_, _SECTION_GENERAL_, null);
     return result_ || pinned_;
   }
 
@@ -435,7 +535,8 @@ public class ThriftParser implements PsiParser {
     if (!recursion_guard_(builder_, level_, "Exception")) return false;
     boolean result_ = false;
     boolean pinned_ = false;
-    Marker marker_ = enter_section_(builder_, level_, _NONE_, "<exception>");
+    Marker marker_ = builder_.mark();
+    enterErrorRecordingSection(builder_, level_, _SECTION_GENERAL_, "<exception>");
     result_ = consumeToken(builder_, "exception");
     pinned_ = result_; // pin = 1
     result_ = result_ && report_error_(builder_, DefinitionName(builder_, level_ + 1));
@@ -443,7 +544,13 @@ public class ThriftParser implements PsiParser {
     result_ = pinned_ && report_error_(builder_, fields(builder_, level_ + 1)) && result_;
     result_ = pinned_ && report_error_(builder_, consumeToken(builder_, RIGHTCURLYBRACE)) && result_;
     result_ = pinned_ && Exception_5(builder_, level_ + 1) && result_;
-    exit_section_(builder_, level_, marker_, EXCEPTION, result_, pinned_, null);
+    if (result_ || pinned_) {
+      marker_.done(EXCEPTION);
+    }
+    else {
+      marker_.rollbackTo();
+    }
+    result_ = exitErrorRecordingSection(builder_, level_, result_, pinned_, _SECTION_GENERAL_, null);
     return result_ || pinned_;
   }
 
@@ -460,7 +567,8 @@ public class ThriftParser implements PsiParser {
     if (!recursion_guard_(builder_, level_, "Field")) return false;
     boolean result_ = false;
     boolean pinned_ = false;
-    Marker marker_ = enter_section_(builder_, level_, _NONE_, "<field>");
+    Marker marker_ = builder_.mark();
+    enterErrorRecordingSection(builder_, level_, _SECTION_GENERAL_, "<field>");
     result_ = Field_0(builder_, level_ + 1);
     result_ = result_ && Field_1(builder_, level_ + 1);
     result_ = result_ && FieldType(builder_, level_ + 1);
@@ -470,7 +578,13 @@ public class ThriftParser implements PsiParser {
     result_ = pinned_ && report_error_(builder_, XsdFieldOptions(builder_, level_ + 1)) && result_;
     result_ = pinned_ && report_error_(builder_, Field_6(builder_, level_ + 1)) && result_;
     result_ = pinned_ && Field_7(builder_, level_ + 1) && result_;
-    exit_section_(builder_, level_, marker_, FIELD, result_, pinned_, fieldRecovery_parser_);
+    if (result_ || pinned_) {
+      marker_.done(FIELD);
+    }
+    else {
+      marker_.rollbackTo();
+    }
+    result_ = exitErrorRecordingSection(builder_, level_, result_, pinned_, _SECTION_GENERAL_, null);
     return result_ || pinned_;
   }
 
@@ -499,10 +613,15 @@ public class ThriftParser implements PsiParser {
   private static boolean Field_4_0(PsiBuilder builder_, int level_) {
     if (!recursion_guard_(builder_, level_, "Field_4_0")) return false;
     boolean result_ = false;
-    Marker marker_ = enter_section_(builder_);
+    Marker marker_ = builder_.mark();
     result_ = consumeToken(builder_, EQUALS);
     result_ = result_ && ConstValue(builder_, level_ + 1);
-    exit_section_(builder_, marker_, null, result_);
+    if (!result_) {
+      marker_.rollbackTo();
+    }
+    else {
+      marker_.drop();
+    }
     return result_;
   }
 
@@ -525,10 +644,17 @@ public class ThriftParser implements PsiParser {
   public static boolean FieldID(PsiBuilder builder_, int level_) {
     if (!recursion_guard_(builder_, level_, "FieldID")) return false;
     boolean result_ = false;
-    Marker marker_ = enter_section_(builder_, level_, _NONE_, "<field id>");
+    Marker marker_ = builder_.mark();
+    enterErrorRecordingSection(builder_, level_, _SECTION_GENERAL_, "<field id>");
     result_ = IntConstant(builder_, level_ + 1);
     result_ = result_ && consumeToken(builder_, COLON);
-    exit_section_(builder_, level_, marker_, FIELD_ID, result_, false, null);
+    if (result_) {
+      marker_.done(FIELD_ID);
+    }
+    else {
+      marker_.rollbackTo();
+    }
+    result_ = exitErrorRecordingSection(builder_, level_, result_, false, _SECTION_GENERAL_, null);
     return result_;
   }
 
@@ -537,10 +663,17 @@ public class ThriftParser implements PsiParser {
   public static boolean FieldReq(PsiBuilder builder_, int level_) {
     if (!recursion_guard_(builder_, level_, "FieldReq")) return false;
     boolean result_ = false;
-    Marker marker_ = enter_section_(builder_, level_, _NONE_, "<field req>");
+    Marker marker_ = builder_.mark();
+    enterErrorRecordingSection(builder_, level_, _SECTION_GENERAL_, "<field req>");
     result_ = consumeToken(builder_, "required");
     if (!result_) result_ = consumeToken(builder_, "optional");
-    exit_section_(builder_, level_, marker_, FIELD_REQ, result_, false, null);
+    if (result_) {
+      marker_.done(FIELD_REQ);
+    }
+    else {
+      marker_.rollbackTo();
+    }
+    result_ = exitErrorRecordingSection(builder_, level_, result_, false, _SECTION_GENERAL_, null);
     return result_;
   }
 
@@ -549,11 +682,18 @@ public class ThriftParser implements PsiParser {
   public static boolean FieldType(PsiBuilder builder_, int level_) {
     if (!recursion_guard_(builder_, level_, "FieldType")) return false;
     boolean result_ = false;
-    Marker marker_ = enter_section_(builder_, level_, _NONE_, "<field type>");
+    Marker marker_ = builder_.mark();
+    enterErrorRecordingSection(builder_, level_, _SECTION_GENERAL_, "<field type>");
     result_ = BaseType(builder_, level_ + 1);
     if (!result_) result_ = ContainerType(builder_, level_ + 1);
     if (!result_) result_ = CustomType(builder_, level_ + 1);
-    exit_section_(builder_, level_, marker_, FIELD_TYPE, result_, false, null);
+    if (result_) {
+      marker_.done(FIELD_TYPE);
+    }
+    else {
+      marker_.rollbackTo();
+    }
+    result_ = exitErrorRecordingSection(builder_, level_, result_, false, _SECTION_GENERAL_, null);
     return result_;
   }
 
@@ -563,7 +703,8 @@ public class ThriftParser implements PsiParser {
     if (!recursion_guard_(builder_, level_, "Function")) return false;
     boolean result_ = false;
     boolean pinned_ = false;
-    Marker marker_ = enter_section_(builder_, level_, _NONE_, "<function>");
+    Marker marker_ = builder_.mark();
+    enterErrorRecordingSection(builder_, level_, _SECTION_GENERAL_, "<function>");
     result_ = Function_0(builder_, level_ + 1);
     result_ = result_ && FunctionType(builder_, level_ + 1);
     result_ = result_ && DefinitionName(builder_, level_ + 1);
@@ -573,7 +714,13 @@ public class ThriftParser implements PsiParser {
     result_ = pinned_ && report_error_(builder_, consumeToken(builder_, RIGHTBRACE)) && result_;
     result_ = pinned_ && report_error_(builder_, Function_6(builder_, level_ + 1)) && result_;
     result_ = pinned_ && Function_7(builder_, level_ + 1) && result_;
-    exit_section_(builder_, level_, marker_, FUNCTION, result_, pinned_, functionRecovery_parser_);
+    if (result_ || pinned_) {
+      marker_.done(FUNCTION);
+    }
+    else {
+      marker_.rollbackTo();
+    }
+    result_ = exitErrorRecordingSection(builder_, level_, result_, pinned_, _SECTION_GENERAL_, null);
     return result_ || pinned_;
   }
 
@@ -603,10 +750,17 @@ public class ThriftParser implements PsiParser {
   public static boolean FunctionType(PsiBuilder builder_, int level_) {
     if (!recursion_guard_(builder_, level_, "FunctionType")) return false;
     boolean result_ = false;
-    Marker marker_ = enter_section_(builder_, level_, _NONE_, "<function type>");
+    Marker marker_ = builder_.mark();
+    enterErrorRecordingSection(builder_, level_, _SECTION_GENERAL_, "<function type>");
     result_ = consumeToken(builder_, "void");
     if (!result_) result_ = FieldType(builder_, level_ + 1);
-    exit_section_(builder_, level_, marker_, FUNCTION_TYPE, result_, false, null);
+    if (result_) {
+      marker_.done(FUNCTION_TYPE);
+    }
+    else {
+      marker_.rollbackTo();
+    }
+    result_ = exitErrorRecordingSection(builder_, level_, result_, false, _SECTION_GENERAL_, null);
     return result_;
   }
 
@@ -616,11 +770,18 @@ public class ThriftParser implements PsiParser {
     if (!recursion_guard_(builder_, level_, "Include")) return false;
     boolean result_ = false;
     boolean pinned_ = false;
-    Marker marker_ = enter_section_(builder_, level_, _NONE_, "<include>");
+    Marker marker_ = builder_.mark();
+    enterErrorRecordingSection(builder_, level_, _SECTION_GENERAL_, "<include>");
     result_ = Include_0(builder_, level_ + 1);
     pinned_ = result_; // pin = 1
     result_ = result_ && consumeToken(builder_, LITERAL);
-    exit_section_(builder_, level_, marker_, INCLUDE, result_, pinned_, null);
+    if (result_ || pinned_) {
+      marker_.done(INCLUDE);
+    }
+    else {
+      marker_.rollbackTo();
+    }
+    result_ = exitErrorRecordingSection(builder_, level_, result_, pinned_, _SECTION_GENERAL_, null);
     return result_ || pinned_;
   }
 
@@ -628,10 +789,15 @@ public class ThriftParser implements PsiParser {
   private static boolean Include_0(PsiBuilder builder_, int level_) {
     if (!recursion_guard_(builder_, level_, "Include_0")) return false;
     boolean result_ = false;
-    Marker marker_ = enter_section_(builder_);
+    Marker marker_ = builder_.mark();
     result_ = consumeToken(builder_, "include");
     if (!result_) result_ = consumeToken(builder_, "cpp_include");
-    exit_section_(builder_, marker_, null, result_);
+    if (!result_) {
+      marker_.rollbackTo();
+    }
+    else {
+      marker_.drop();
+    }
     return result_;
   }
 
@@ -640,10 +806,17 @@ public class ThriftParser implements PsiParser {
   public static boolean IntConstant(PsiBuilder builder_, int level_) {
     if (!recursion_guard_(builder_, level_, "IntConstant")) return false;
     boolean result_ = false;
-    Marker marker_ = enter_section_(builder_, level_, _NONE_, "<int constant>");
+    Marker marker_ = builder_.mark();
+    enterErrorRecordingSection(builder_, level_, _SECTION_GENERAL_, "<int constant>");
     result_ = IntConstant_0(builder_, level_ + 1);
     result_ = result_ && consumeToken(builder_, INTEGER);
-    exit_section_(builder_, level_, marker_, INT_CONSTANT, result_, false, null);
+    if (result_) {
+      marker_.done(INT_CONSTANT);
+    }
+    else {
+      marker_.rollbackTo();
+    }
+    result_ = exitErrorRecordingSection(builder_, level_, result_, false, _SECTION_GENERAL_, null);
     return result_;
   }
 
@@ -658,10 +831,15 @@ public class ThriftParser implements PsiParser {
   private static boolean IntConstant_0_0(PsiBuilder builder_, int level_) {
     if (!recursion_guard_(builder_, level_, "IntConstant_0_0")) return false;
     boolean result_ = false;
-    Marker marker_ = enter_section_(builder_);
+    Marker marker_ = builder_.mark();
     result_ = consumeToken(builder_, PLUS);
     if (!result_) result_ = consumeToken(builder_, MINUS);
-    exit_section_(builder_, marker_, null, result_);
+    if (!result_) {
+      marker_.rollbackTo();
+    }
+    else {
+      marker_.drop();
+    }
     return result_;
   }
 
@@ -669,12 +847,20 @@ public class ThriftParser implements PsiParser {
   // ',' | ';'
   public static boolean ListSeparator(PsiBuilder builder_, int level_) {
     if (!recursion_guard_(builder_, level_, "ListSeparator")) return false;
-    if (!nextTokenIs(builder_, "<list separator>", COMMA, SEMICOLON)) return false;
+    if (!nextTokenIs(builder_, COMMA) && !nextTokenIs(builder_, SEMICOLON)
+        && replaceVariants(builder_, 2, "<list separator>")) return false;
     boolean result_ = false;
-    Marker marker_ = enter_section_(builder_, level_, _NONE_, "<list separator>");
+    Marker marker_ = builder_.mark();
+    enterErrorRecordingSection(builder_, level_, _SECTION_GENERAL_, "<list separator>");
     result_ = consumeToken(builder_, COMMA);
     if (!result_) result_ = consumeToken(builder_, SEMICOLON);
-    exit_section_(builder_, level_, marker_, LIST_SEPARATOR, result_, false, null);
+    if (result_) {
+      marker_.done(LIST_SEPARATOR);
+    }
+    else {
+      marker_.rollbackTo();
+    }
+    result_ = exitErrorRecordingSection(builder_, level_, result_, false, _SECTION_GENERAL_, null);
     return result_;
   }
 
@@ -684,14 +870,21 @@ public class ThriftParser implements PsiParser {
     if (!recursion_guard_(builder_, level_, "ListType")) return false;
     boolean result_ = false;
     boolean pinned_ = false;
-    Marker marker_ = enter_section_(builder_, level_, _NONE_, "<list type>");
+    Marker marker_ = builder_.mark();
+    enterErrorRecordingSection(builder_, level_, _SECTION_GENERAL_, "<list type>");
     result_ = consumeToken(builder_, "list");
     pinned_ = result_; // pin = 1
     result_ = result_ && report_error_(builder_, consumeToken(builder_, LT));
     result_ = pinned_ && report_error_(builder_, FieldType(builder_, level_ + 1)) && result_;
     result_ = pinned_ && report_error_(builder_, consumeToken(builder_, GT)) && result_;
     result_ = pinned_ && ListType_4(builder_, level_ + 1) && result_;
-    exit_section_(builder_, level_, marker_, LIST_TYPE, result_, pinned_, null);
+    if (result_ || pinned_) {
+      marker_.done(LIST_TYPE);
+    }
+    else {
+      marker_.rollbackTo();
+    }
+    result_ = exitErrorRecordingSection(builder_, level_, result_, pinned_, _SECTION_GENERAL_, null);
     return result_ || pinned_;
   }
 
@@ -708,7 +901,8 @@ public class ThriftParser implements PsiParser {
     if (!recursion_guard_(builder_, level_, "MapType")) return false;
     boolean result_ = false;
     boolean pinned_ = false;
-    Marker marker_ = enter_section_(builder_, level_, _NONE_, "<map type>");
+    Marker marker_ = builder_.mark();
+    enterErrorRecordingSection(builder_, level_, _SECTION_GENERAL_, "<map type>");
     result_ = consumeToken(builder_, "map");
     pinned_ = result_; // pin = 1
     result_ = result_ && report_error_(builder_, MapType_1(builder_, level_ + 1));
@@ -717,7 +911,13 @@ public class ThriftParser implements PsiParser {
     result_ = pinned_ && report_error_(builder_, consumeToken(builder_, COMMA)) && result_;
     result_ = pinned_ && report_error_(builder_, FieldType(builder_, level_ + 1)) && result_;
     result_ = pinned_ && consumeToken(builder_, GT) && result_;
-    exit_section_(builder_, level_, marker_, MAP_TYPE, result_, pinned_, null);
+    if (result_ || pinned_) {
+      marker_.done(MAP_TYPE);
+    }
+    else {
+      marker_.rollbackTo();
+    }
+    result_ = exitErrorRecordingSection(builder_, level_, result_, pinned_, _SECTION_GENERAL_, null);
     return result_ || pinned_;
   }
 
@@ -733,11 +933,18 @@ public class ThriftParser implements PsiParser {
   public static boolean Namespace(PsiBuilder builder_, int level_) {
     if (!recursion_guard_(builder_, level_, "Namespace")) return false;
     boolean result_ = false;
-    Marker marker_ = enter_section_(builder_, level_, _NONE_, "<namespace>");
+    Marker marker_ = builder_.mark();
+    enterErrorRecordingSection(builder_, level_, _SECTION_GENERAL_, "<namespace>");
     result_ = std_namespace(builder_, level_ + 1);
     if (!result_) result_ = php_namespace(builder_, level_ + 1);
     if (!result_) result_ = xsd_namespace(builder_, level_ + 1);
-    exit_section_(builder_, level_, marker_, NAMESPACE, result_, false, null);
+    if (result_) {
+      marker_.done(NAMESPACE);
+    }
+    else {
+      marker_.rollbackTo();
+    }
+    result_ = exitErrorRecordingSection(builder_, level_, result_, false, _SECTION_GENERAL_, null);
     return result_;
   }
 
@@ -747,7 +954,8 @@ public class ThriftParser implements PsiParser {
   public static boolean NamespaceScope(PsiBuilder builder_, int level_) {
     if (!recursion_guard_(builder_, level_, "NamespaceScope")) return false;
     boolean result_ = false;
-    Marker marker_ = enter_section_(builder_, level_, _NONE_, "<namespace scope>");
+    Marker marker_ = builder_.mark();
+    enterErrorRecordingSection(builder_, level_, _SECTION_GENERAL_, "<namespace scope>");
     result_ = consumeToken(builder_, MULTIPLY);
     if (!result_) result_ = consumeToken(builder_, "cpp");
     if (!result_) result_ = consumeToken(builder_, "java");
@@ -763,7 +971,13 @@ public class ThriftParser implements PsiParser {
     if (!result_) result_ = consumeToken(builder_, "go");
     if (!result_) result_ = consumeToken(builder_, "php");
     if (!result_) result_ = consumeToken(builder_, "delphi");
-    exit_section_(builder_, level_, marker_, NAMESPACE_SCOPE, result_, false, null);
+    if (result_) {
+      marker_.done(NAMESPACE_SCOPE);
+    }
+    else {
+      marker_.rollbackTo();
+    }
+    result_ = exitErrorRecordingSection(builder_, level_, result_, false, _SECTION_GENERAL_, null);
     return result_;
   }
 
@@ -773,7 +987,8 @@ public class ThriftParser implements PsiParser {
     if (!recursion_guard_(builder_, level_, "Senum")) return false;
     boolean result_ = false;
     boolean pinned_ = false;
-    Marker marker_ = enter_section_(builder_, level_, _NONE_, "<senum>");
+    Marker marker_ = builder_.mark();
+    enterErrorRecordingSection(builder_, level_, _SECTION_GENERAL_, "<senum>");
     result_ = consumeToken(builder_, "senum");
     pinned_ = result_; // pin = 1
     result_ = result_ && report_error_(builder_, DefinitionName(builder_, level_ + 1));
@@ -781,7 +996,13 @@ public class ThriftParser implements PsiParser {
     result_ = pinned_ && report_error_(builder_, senumBody(builder_, level_ + 1)) && result_;
     result_ = pinned_ && report_error_(builder_, consumeToken(builder_, RIGHTCURLYBRACE)) && result_;
     result_ = pinned_ && Senum_5(builder_, level_ + 1) && result_;
-    exit_section_(builder_, level_, marker_, SENUM, result_, pinned_, null);
+    if (result_ || pinned_) {
+      marker_.done(SENUM);
+    }
+    else {
+      marker_.rollbackTo();
+    }
+    result_ = exitErrorRecordingSection(builder_, level_, result_, pinned_, _SECTION_GENERAL_, null);
     return result_ || pinned_;
   }
 
@@ -798,7 +1019,8 @@ public class ThriftParser implements PsiParser {
     if (!recursion_guard_(builder_, level_, "Service")) return false;
     boolean result_ = false;
     boolean pinned_ = false;
-    Marker marker_ = enter_section_(builder_, level_, _NONE_, "<service>");
+    Marker marker_ = builder_.mark();
+    enterErrorRecordingSection(builder_, level_, _SECTION_GENERAL_, "<service>");
     result_ = consumeToken(builder_, "service");
     pinned_ = result_; // pin = 1
     result_ = result_ && report_error_(builder_, DefinitionName(builder_, level_ + 1));
@@ -807,7 +1029,13 @@ public class ThriftParser implements PsiParser {
     result_ = pinned_ && report_error_(builder_, serviceBody(builder_, level_ + 1)) && result_;
     result_ = pinned_ && report_error_(builder_, consumeToken(builder_, RIGHTCURLYBRACE)) && result_;
     result_ = pinned_ && Service_6(builder_, level_ + 1) && result_;
-    exit_section_(builder_, level_, marker_, SERVICE, result_, pinned_, null);
+    if (result_ || pinned_) {
+      marker_.done(SERVICE);
+    }
+    else {
+      marker_.rollbackTo();
+    }
+    result_ = exitErrorRecordingSection(builder_, level_, result_, pinned_, _SECTION_GENERAL_, null);
     return result_ || pinned_;
   }
 
@@ -822,10 +1050,15 @@ public class ThriftParser implements PsiParser {
   private static boolean Service_2_0(PsiBuilder builder_, int level_) {
     if (!recursion_guard_(builder_, level_, "Service_2_0")) return false;
     boolean result_ = false;
-    Marker marker_ = enter_section_(builder_);
+    Marker marker_ = builder_.mark();
     result_ = consumeToken(builder_, "extends");
     result_ = result_ && ServiceSuperName(builder_, level_ + 1);
-    exit_section_(builder_, marker_, null, result_);
+    if (!result_) {
+      marker_.rollbackTo();
+    }
+    else {
+      marker_.drop();
+    }
     return result_;
   }
 
@@ -842,9 +1075,14 @@ public class ThriftParser implements PsiParser {
     if (!recursion_guard_(builder_, level_, "ServiceSuperName")) return false;
     if (!nextTokenIs(builder_, IDENTIFIER)) return false;
     boolean result_ = false;
-    Marker marker_ = enter_section_(builder_);
+    Marker marker_ = builder_.mark();
     result_ = consumeToken(builder_, IDENTIFIER);
-    exit_section_(builder_, marker_, SERVICE_SUPER_NAME, result_);
+    if (result_) {
+      marker_.done(SERVICE_SUPER_NAME);
+    }
+    else {
+      marker_.rollbackTo();
+    }
     return result_;
   }
 
@@ -854,14 +1092,21 @@ public class ThriftParser implements PsiParser {
     if (!recursion_guard_(builder_, level_, "SetType")) return false;
     boolean result_ = false;
     boolean pinned_ = false;
-    Marker marker_ = enter_section_(builder_, level_, _NONE_, "<set type>");
+    Marker marker_ = builder_.mark();
+    enterErrorRecordingSection(builder_, level_, _SECTION_GENERAL_, "<set type>");
     result_ = consumeToken(builder_, "set");
     pinned_ = result_; // pin = 1
     result_ = result_ && report_error_(builder_, SetType_1(builder_, level_ + 1));
     result_ = pinned_ && report_error_(builder_, consumeToken(builder_, LT)) && result_;
     result_ = pinned_ && report_error_(builder_, FieldType(builder_, level_ + 1)) && result_;
     result_ = pinned_ && consumeToken(builder_, GT) && result_;
-    exit_section_(builder_, level_, marker_, SET_TYPE, result_, pinned_, null);
+    if (result_ || pinned_) {
+      marker_.done(SET_TYPE);
+    }
+    else {
+      marker_.rollbackTo();
+    }
+    result_ = exitErrorRecordingSection(builder_, level_, result_, pinned_, _SECTION_GENERAL_, null);
     return result_ || pinned_;
   }
 
@@ -878,7 +1123,8 @@ public class ThriftParser implements PsiParser {
     if (!recursion_guard_(builder_, level_, "Struct")) return false;
     boolean result_ = false;
     boolean pinned_ = false;
-    Marker marker_ = enter_section_(builder_, level_, _NONE_, "<struct>");
+    Marker marker_ = builder_.mark();
+    enterErrorRecordingSection(builder_, level_, _SECTION_GENERAL_, "<struct>");
     result_ = consumeToken(builder_, "struct");
     pinned_ = result_; // pin = 1
     result_ = result_ && report_error_(builder_, DefinitionName(builder_, level_ + 1));
@@ -887,7 +1133,13 @@ public class ThriftParser implements PsiParser {
     result_ = pinned_ && report_error_(builder_, fields(builder_, level_ + 1)) && result_;
     result_ = pinned_ && report_error_(builder_, consumeToken(builder_, RIGHTCURLYBRACE)) && result_;
     result_ = pinned_ && Struct_6(builder_, level_ + 1) && result_;
-    exit_section_(builder_, level_, marker_, STRUCT, result_, pinned_, null);
+    if (result_ || pinned_) {
+      marker_.done(STRUCT);
+    }
+    else {
+      marker_.rollbackTo();
+    }
+    result_ = exitErrorRecordingSection(builder_, level_, result_, pinned_, _SECTION_GENERAL_, null);
     return result_ || pinned_;
   }
 
@@ -911,13 +1163,20 @@ public class ThriftParser implements PsiParser {
     if (!recursion_guard_(builder_, level_, "Throws")) return false;
     boolean result_ = false;
     boolean pinned_ = false;
-    Marker marker_ = enter_section_(builder_, level_, _NONE_, "<throws>");
+    Marker marker_ = builder_.mark();
+    enterErrorRecordingSection(builder_, level_, _SECTION_GENERAL_, "<throws>");
     result_ = consumeToken(builder_, "throws");
     pinned_ = result_; // pin = 1
     result_ = result_ && report_error_(builder_, consumeToken(builder_, LEFTBRACE));
     result_ = pinned_ && report_error_(builder_, fieldsWithBraceRecovery(builder_, level_ + 1)) && result_;
     result_ = pinned_ && consumeToken(builder_, RIGHTBRACE) && result_;
-    exit_section_(builder_, level_, marker_, THROWS, result_, pinned_, null);
+    if (result_ || pinned_) {
+      marker_.done(THROWS);
+    }
+    else {
+      marker_.rollbackTo();
+    }
+    result_ = exitErrorRecordingSection(builder_, level_, result_, pinned_, _SECTION_GENERAL_, null);
     return result_ || pinned_;
   }
 
@@ -927,12 +1186,17 @@ public class ThriftParser implements PsiParser {
     if (!recursion_guard_(builder_, level_, "TypeAnnotation")) return false;
     if (!nextTokenIs(builder_, IDENTIFIER)) return false;
     boolean result_ = false;
-    Marker marker_ = enter_section_(builder_);
+    Marker marker_ = builder_.mark();
     result_ = consumeToken(builder_, IDENTIFIER);
     result_ = result_ && consumeToken(builder_, EQUALS);
     result_ = result_ && consumeToken(builder_, LITERAL);
     result_ = result_ && TypeAnnotation_3(builder_, level_ + 1);
-    exit_section_(builder_, marker_, TYPE_ANNOTATION, result_);
+    if (result_) {
+      marker_.done(TYPE_ANNOTATION);
+    }
+    else {
+      marker_.rollbackTo();
+    }
     return result_;
   }
 
@@ -947,14 +1211,20 @@ public class ThriftParser implements PsiParser {
   // TypeAnnotation*
   public static boolean TypeAnnotationList(PsiBuilder builder_, int level_) {
     if (!recursion_guard_(builder_, level_, "TypeAnnotationList")) return false;
-    Marker marker_ = enter_section_(builder_, level_, _NONE_, "<type annotation list>");
-    int pos_ = current_position_(builder_);
+    Marker marker_ = builder_.mark();
+    enterErrorRecordingSection(builder_, level_, _SECTION_GENERAL_, "<type annotation list>");
+    int offset_ = builder_.getCurrentOffset();
     while (true) {
       if (!TypeAnnotation(builder_, level_ + 1)) break;
-      if (!empty_element_parsed_guard_(builder_, "TypeAnnotationList", pos_)) break;
-      pos_ = current_position_(builder_);
+      int next_offset_ = builder_.getCurrentOffset();
+      if (offset_ == next_offset_) {
+        empty_element_parsed_guard_(builder_, offset_, "TypeAnnotationList");
+        break;
+      }
+      offset_ = next_offset_;
     }
-    exit_section_(builder_, level_, marker_, TYPE_ANNOTATION_LIST, true, false, braceRecovery_parser_);
+    marker_.done(TYPE_ANNOTATION_LIST);
+    exitErrorRecordingSection(builder_, level_, true, false, _SECTION_GENERAL_, null);
     return true;
   }
 
@@ -964,11 +1234,16 @@ public class ThriftParser implements PsiParser {
     if (!recursion_guard_(builder_, level_, "TypeAnnotations")) return false;
     if (!nextTokenIs(builder_, LEFTBRACE)) return false;
     boolean result_ = false;
-    Marker marker_ = enter_section_(builder_);
+    Marker marker_ = builder_.mark();
     result_ = consumeToken(builder_, LEFTBRACE);
     result_ = result_ && TypeAnnotationList(builder_, level_ + 1);
     result_ = result_ && consumeToken(builder_, RIGHTBRACE);
-    exit_section_(builder_, marker_, TYPE_ANNOTATIONS, result_);
+    if (result_) {
+      marker_.done(TYPE_ANNOTATIONS);
+    }
+    else {
+      marker_.rollbackTo();
+    }
     return result_;
   }
 
@@ -978,13 +1253,20 @@ public class ThriftParser implements PsiParser {
     if (!recursion_guard_(builder_, level_, "Typedef")) return false;
     boolean result_ = false;
     boolean pinned_ = false;
-    Marker marker_ = enter_section_(builder_, level_, _NONE_, "<typedef>");
+    Marker marker_ = builder_.mark();
+    enterErrorRecordingSection(builder_, level_, _SECTION_GENERAL_, "<typedef>");
     result_ = consumeToken(builder_, "typedef");
     pinned_ = result_; // pin = 1
     result_ = result_ && report_error_(builder_, FieldType(builder_, level_ + 1));
     result_ = pinned_ && report_error_(builder_, DefinitionName(builder_, level_ + 1)) && result_;
     result_ = pinned_ && Typedef_3(builder_, level_ + 1) && result_;
-    exit_section_(builder_, level_, marker_, TYPEDEF, result_, pinned_, null);
+    if (result_ || pinned_) {
+      marker_.done(TYPEDEF);
+    }
+    else {
+      marker_.rollbackTo();
+    }
+    result_ = exitErrorRecordingSection(builder_, level_, result_, pinned_, _SECTION_GENERAL_, null);
     return result_ || pinned_;
   }
 
@@ -1001,7 +1283,8 @@ public class ThriftParser implements PsiParser {
     if (!recursion_guard_(builder_, level_, "Union")) return false;
     boolean result_ = false;
     boolean pinned_ = false;
-    Marker marker_ = enter_section_(builder_, level_, _NONE_, "<union>");
+    Marker marker_ = builder_.mark();
+    enterErrorRecordingSection(builder_, level_, _SECTION_GENERAL_, "<union>");
     result_ = consumeToken(builder_, "union");
     pinned_ = result_; // pin = 1
     result_ = result_ && report_error_(builder_, DefinitionName(builder_, level_ + 1));
@@ -1009,7 +1292,13 @@ public class ThriftParser implements PsiParser {
     result_ = pinned_ && report_error_(builder_, consumeToken(builder_, LEFTCURLYBRACE)) && result_;
     result_ = pinned_ && report_error_(builder_, fields(builder_, level_ + 1)) && result_;
     result_ = pinned_ && consumeToken(builder_, RIGHTCURLYBRACE) && result_;
-    exit_section_(builder_, level_, marker_, UNION, result_, pinned_, null);
+    if (result_ || pinned_) {
+      marker_.done(UNION);
+    }
+    else {
+      marker_.rollbackTo();
+    }
+    result_ = exitErrorRecordingSection(builder_, level_, result_, pinned_, _SECTION_GENERAL_, null);
     return result_ || pinned_;
   }
 
@@ -1026,13 +1315,20 @@ public class ThriftParser implements PsiParser {
     if (!recursion_guard_(builder_, level_, "XsdAttrs")) return false;
     boolean result_ = false;
     boolean pinned_ = false;
-    Marker marker_ = enter_section_(builder_, level_, _NONE_, "<xsd attrs>");
+    Marker marker_ = builder_.mark();
+    enterErrorRecordingSection(builder_, level_, _SECTION_GENERAL_, "<xsd attrs>");
     result_ = consumeToken(builder_, "xsd_attrs");
     pinned_ = result_; // pin = 1
     result_ = result_ && report_error_(builder_, consumeToken(builder_, LEFTCURLYBRACE));
     result_ = pinned_ && report_error_(builder_, fields(builder_, level_ + 1)) && result_;
     result_ = pinned_ && consumeToken(builder_, RIGHTCURLYBRACE) && result_;
-    exit_section_(builder_, level_, marker_, XSD_ATTRS, result_, pinned_, null);
+    if (result_ || pinned_) {
+      marker_.done(XSD_ATTRS);
+    }
+    else {
+      marker_.rollbackTo();
+    }
+    result_ = exitErrorRecordingSection(builder_, level_, result_, pinned_, _SECTION_GENERAL_, null);
     return result_ || pinned_;
   }
 
@@ -1041,11 +1337,18 @@ public class ThriftParser implements PsiParser {
   public static boolean XsdFieldOptions(PsiBuilder builder_, int level_) {
     if (!recursion_guard_(builder_, level_, "XsdFieldOptions")) return false;
     boolean result_ = false;
-    Marker marker_ = enter_section_(builder_, level_, _NONE_, "<xsd field options>");
+    Marker marker_ = builder_.mark();
+    enterErrorRecordingSection(builder_, level_, _SECTION_GENERAL_, "<xsd field options>");
     result_ = XsdFieldOptions_0(builder_, level_ + 1);
     result_ = result_ && XsdFieldOptions_1(builder_, level_ + 1);
     result_ = result_ && XsdFieldOptions_2(builder_, level_ + 1);
-    exit_section_(builder_, level_, marker_, XSD_FIELD_OPTIONS, result_, false, null);
+    if (result_) {
+      marker_.done(XSD_FIELD_OPTIONS);
+    }
+    else {
+      marker_.rollbackTo();
+    }
+    result_ = exitErrorRecordingSection(builder_, level_, result_, false, _SECTION_GENERAL_, null);
     return result_;
   }
 
@@ -1075,9 +1378,11 @@ public class ThriftParser implements PsiParser {
   static boolean braceRecovery(PsiBuilder builder_, int level_) {
     if (!recursion_guard_(builder_, level_, "braceRecovery")) return false;
     boolean result_ = false;
-    Marker marker_ = enter_section_(builder_, level_, _NOT_, null);
+    Marker marker_ = builder_.mark();
+    enterErrorRecordingSection(builder_, level_, _SECTION_NOT_, null);
     result_ = !braceRecovery_0(builder_, level_ + 1);
-    exit_section_(builder_, level_, marker_, null, result_, false, null);
+    marker_.rollbackTo();
+    result_ = exitErrorRecordingSection(builder_, level_, result_, false, _SECTION_NOT_, null);
     return result_;
   }
 
@@ -1085,9 +1390,14 @@ public class ThriftParser implements PsiParser {
   private static boolean braceRecovery_0(PsiBuilder builder_, int level_) {
     if (!recursion_guard_(builder_, level_, "braceRecovery_0")) return false;
     boolean result_ = false;
-    Marker marker_ = enter_section_(builder_);
+    Marker marker_ = builder_.mark();
     result_ = consumeToken(builder_, RIGHTBRACE);
-    exit_section_(builder_, marker_, null, result_);
+    if (!result_) {
+      marker_.rollbackTo();
+    }
+    else {
+      marker_.drop();
+    }
     return result_;
   }
 
@@ -1096,9 +1406,11 @@ public class ThriftParser implements PsiParser {
   static boolean curlyBraceRecovery(PsiBuilder builder_, int level_) {
     if (!recursion_guard_(builder_, level_, "curlyBraceRecovery")) return false;
     boolean result_ = false;
-    Marker marker_ = enter_section_(builder_, level_, _NOT_, null);
+    Marker marker_ = builder_.mark();
+    enterErrorRecordingSection(builder_, level_, _SECTION_NOT_, null);
     result_ = !curlyBraceRecovery_0(builder_, level_ + 1);
-    exit_section_(builder_, level_, marker_, null, result_, false, null);
+    marker_.rollbackTo();
+    result_ = exitErrorRecordingSection(builder_, level_, result_, false, _SECTION_NOT_, null);
     return result_;
   }
 
@@ -1106,9 +1418,14 @@ public class ThriftParser implements PsiParser {
   private static boolean curlyBraceRecovery_0(PsiBuilder builder_, int level_) {
     if (!recursion_guard_(builder_, level_, "curlyBraceRecovery_0")) return false;
     boolean result_ = false;
-    Marker marker_ = enter_section_(builder_);
+    Marker marker_ = builder_.mark();
     result_ = consumeToken(builder_, RIGHTCURLYBRACE);
-    exit_section_(builder_, marker_, null, result_);
+    if (!result_) {
+      marker_.rollbackTo();
+    }
+    else {
+      marker_.drop();
+    }
     return result_;
   }
 
@@ -1116,13 +1433,19 @@ public class ThriftParser implements PsiParser {
   // Identifier ('=' IntConstant)? TypeAnnotations? ListSeparator?
   public static boolean enumField(PsiBuilder builder_, int level_) {
     if (!recursion_guard_(builder_, level_, "enumField")) return false;
+    if (!nextTokenIs(builder_, IDENTIFIER)) return false;
     boolean result_ = false;
-    Marker marker_ = enter_section_(builder_, level_, _NONE_, "<enum field>");
+    Marker marker_ = builder_.mark();
     result_ = consumeToken(builder_, IDENTIFIER);
     result_ = result_ && enumField_1(builder_, level_ + 1);
     result_ = result_ && enumField_2(builder_, level_ + 1);
     result_ = result_ && enumField_3(builder_, level_ + 1);
-    exit_section_(builder_, level_, marker_, ENUM_FIELD, result_, false, enumFieldRecovery_parser_);
+    if (result_) {
+      marker_.done(ENUM_FIELD);
+    }
+    else {
+      marker_.rollbackTo();
+    }
     return result_;
   }
 
@@ -1137,10 +1460,15 @@ public class ThriftParser implements PsiParser {
   private static boolean enumField_1_0(PsiBuilder builder_, int level_) {
     if (!recursion_guard_(builder_, level_, "enumField_1_0")) return false;
     boolean result_ = false;
-    Marker marker_ = enter_section_(builder_);
+    Marker marker_ = builder_.mark();
     result_ = consumeToken(builder_, EQUALS);
     result_ = result_ && IntConstant(builder_, level_ + 1);
-    exit_section_(builder_, marker_, null, result_);
+    if (!result_) {
+      marker_.rollbackTo();
+    }
+    else {
+      marker_.drop();
+    }
     return result_;
   }
 
@@ -1163,9 +1491,11 @@ public class ThriftParser implements PsiParser {
   static boolean enumFieldRecovery(PsiBuilder builder_, int level_) {
     if (!recursion_guard_(builder_, level_, "enumFieldRecovery")) return false;
     boolean result_ = false;
-    Marker marker_ = enter_section_(builder_, level_, _NOT_, null);
+    Marker marker_ = builder_.mark();
+    enterErrorRecordingSection(builder_, level_, _SECTION_NOT_, null);
     result_ = !enumFieldRecovery_0(builder_, level_ + 1);
-    exit_section_(builder_, level_, marker_, null, result_, false, null);
+    marker_.rollbackTo();
+    result_ = exitErrorRecordingSection(builder_, level_, result_, false, _SECTION_NOT_, null);
     return result_;
   }
 
@@ -1173,10 +1503,15 @@ public class ThriftParser implements PsiParser {
   private static boolean enumFieldRecovery_0(PsiBuilder builder_, int level_) {
     if (!recursion_guard_(builder_, level_, "enumFieldRecovery_0")) return false;
     boolean result_ = false;
-    Marker marker_ = enter_section_(builder_);
+    Marker marker_ = builder_.mark();
     result_ = consumeToken(builder_, RIGHTCURLYBRACE);
     if (!result_) result_ = consumeToken(builder_, IDENTIFIER);
-    exit_section_(builder_, marker_, null, result_);
+    if (!result_) {
+      marker_.rollbackTo();
+    }
+    else {
+      marker_.drop();
+    }
     return result_;
   }
 
@@ -1184,14 +1519,20 @@ public class ThriftParser implements PsiParser {
   // enumField*
   public static boolean enumFields(PsiBuilder builder_, int level_) {
     if (!recursion_guard_(builder_, level_, "enumFields")) return false;
-    Marker marker_ = enter_section_(builder_, level_, _NONE_, "<enum fields>");
-    int pos_ = current_position_(builder_);
+    Marker marker_ = builder_.mark();
+    enterErrorRecordingSection(builder_, level_, _SECTION_GENERAL_, "<enum fields>");
+    int offset_ = builder_.getCurrentOffset();
     while (true) {
       if (!enumField(builder_, level_ + 1)) break;
-      if (!empty_element_parsed_guard_(builder_, "enumFields", pos_)) break;
-      pos_ = current_position_(builder_);
+      int next_offset_ = builder_.getCurrentOffset();
+      if (offset_ == next_offset_) {
+        empty_element_parsed_guard_(builder_, offset_, "enumFields");
+        break;
+      }
+      offset_ = next_offset_;
     }
-    exit_section_(builder_, level_, marker_, ENUM_FIELDS, true, false, null);
+    marker_.done(ENUM_FIELDS);
+    exitErrorRecordingSection(builder_, level_, true, false, _SECTION_GENERAL_, null);
     return true;
   }
 
@@ -1201,9 +1542,11 @@ public class ThriftParser implements PsiParser {
   static boolean fieldRecovery(PsiBuilder builder_, int level_) {
     if (!recursion_guard_(builder_, level_, "fieldRecovery")) return false;
     boolean result_ = false;
-    Marker marker_ = enter_section_(builder_, level_, _NOT_, null);
+    Marker marker_ = builder_.mark();
+    enterErrorRecordingSection(builder_, level_, _SECTION_NOT_, null);
     result_ = !fieldRecovery_0(builder_, level_ + 1);
-    exit_section_(builder_, level_, marker_, null, result_, false, null);
+    marker_.rollbackTo();
+    result_ = exitErrorRecordingSection(builder_, level_, result_, false, _SECTION_NOT_, null);
     return result_;
   }
 
@@ -1212,7 +1555,7 @@ public class ThriftParser implements PsiParser {
   private static boolean fieldRecovery_0(PsiBuilder builder_, int level_) {
     if (!recursion_guard_(builder_, level_, "fieldRecovery_0")) return false;
     boolean result_ = false;
-    Marker marker_ = enter_section_(builder_);
+    Marker marker_ = builder_.mark();
     result_ = consumeToken(builder_, RIGHTBRACE);
     if (!result_) result_ = consumeToken(builder_, PLUS);
     if (!result_) result_ = consumeToken(builder_, MINUS);
@@ -1234,7 +1577,12 @@ public class ThriftParser implements PsiParser {
     if (!result_) result_ = consumeToken(builder_, INTEGER);
     if (!result_) result_ = consumeToken(builder_, IDENTIFIER);
     if (!result_) result_ = consumeToken(builder_, NUMBER);
-    exit_section_(builder_, marker_, null, result_);
+    if (!result_) {
+      marker_.rollbackTo();
+    }
+    else {
+      marker_.drop();
+    }
     return result_;
   }
 
@@ -1242,14 +1590,20 @@ public class ThriftParser implements PsiParser {
   // Field*
   public static boolean fields(PsiBuilder builder_, int level_) {
     if (!recursion_guard_(builder_, level_, "fields")) return false;
-    Marker marker_ = enter_section_(builder_, level_, _NONE_, "<fields>");
-    int pos_ = current_position_(builder_);
+    Marker marker_ = builder_.mark();
+    enterErrorRecordingSection(builder_, level_, _SECTION_GENERAL_, "<fields>");
+    int offset_ = builder_.getCurrentOffset();
     while (true) {
       if (!Field(builder_, level_ + 1)) break;
-      if (!empty_element_parsed_guard_(builder_, "fields", pos_)) break;
-      pos_ = current_position_(builder_);
+      int next_offset_ = builder_.getCurrentOffset();
+      if (offset_ == next_offset_) {
+        empty_element_parsed_guard_(builder_, offset_, "fields");
+        break;
+      }
+      offset_ = next_offset_;
     }
-    exit_section_(builder_, level_, marker_, FIELDS, true, false, curlyBraceRecovery_parser_);
+    marker_.done(FIELDS);
+    exitErrorRecordingSection(builder_, level_, true, false, _SECTION_GENERAL_, null);
     return true;
   }
 
@@ -1257,14 +1611,16 @@ public class ThriftParser implements PsiParser {
   // Field*
   static boolean fieldsWithBraceRecovery(PsiBuilder builder_, int level_) {
     if (!recursion_guard_(builder_, level_, "fieldsWithBraceRecovery")) return false;
-    Marker marker_ = enter_section_(builder_, level_, _NONE_, null);
-    int pos_ = current_position_(builder_);
+    int offset_ = builder_.getCurrentOffset();
     while (true) {
       if (!Field(builder_, level_ + 1)) break;
-      if (!empty_element_parsed_guard_(builder_, "fieldsWithBraceRecovery", pos_)) break;
-      pos_ = current_position_(builder_);
+      int next_offset_ = builder_.getCurrentOffset();
+      if (offset_ == next_offset_) {
+        empty_element_parsed_guard_(builder_, offset_, "fieldsWithBraceRecovery");
+        break;
+      }
+      offset_ = next_offset_;
     }
-    exit_section_(builder_, level_, marker_, null, true, false, braceRecovery_parser_);
     return true;
   }
 
@@ -1274,9 +1630,11 @@ public class ThriftParser implements PsiParser {
   static boolean functionRecovery(PsiBuilder builder_, int level_) {
     if (!recursion_guard_(builder_, level_, "functionRecovery")) return false;
     boolean result_ = false;
-    Marker marker_ = enter_section_(builder_, level_, _NOT_, null);
+    Marker marker_ = builder_.mark();
+    enterErrorRecordingSection(builder_, level_, _SECTION_NOT_, null);
     result_ = !functionRecovery_0(builder_, level_ + 1);
-    exit_section_(builder_, level_, marker_, null, result_, false, null);
+    marker_.rollbackTo();
+    result_ = exitErrorRecordingSection(builder_, level_, result_, false, _SECTION_NOT_, null);
     return result_;
   }
 
@@ -1285,7 +1643,7 @@ public class ThriftParser implements PsiParser {
   private static boolean functionRecovery_0(PsiBuilder builder_, int level_) {
     if (!recursion_guard_(builder_, level_, "functionRecovery_0")) return false;
     boolean result_ = false;
-    Marker marker_ = enter_section_(builder_);
+    Marker marker_ = builder_.mark();
     result_ = consumeToken(builder_, "binary");
     if (!result_) result_ = consumeToken(builder_, "bool");
     if (!result_) result_ = consumeToken(builder_, "byte");
@@ -1303,7 +1661,12 @@ public class ThriftParser implements PsiParser {
     if (!result_) result_ = consumeToken(builder_, RIGHTCURLYBRACE);
     if (!result_) result_ = consumeToken(builder_, IDENTIFIER);
     if (!result_) result_ = ListSeparator(builder_, level_ + 1);
-    exit_section_(builder_, marker_, null, result_);
+    if (!result_) {
+      marker_.rollbackTo();
+    }
+    else {
+      marker_.drop();
+    }
     return result_;
   }
 
@@ -1312,9 +1675,11 @@ public class ThriftParser implements PsiParser {
   static boolean functionsRecovery(PsiBuilder builder_, int level_) {
     if (!recursion_guard_(builder_, level_, "functionsRecovery")) return false;
     boolean result_ = false;
-    Marker marker_ = enter_section_(builder_, level_, _NOT_, null);
+    Marker marker_ = builder_.mark();
+    enterErrorRecordingSection(builder_, level_, _SECTION_NOT_, null);
     result_ = !functionsRecovery_0(builder_, level_ + 1);
-    exit_section_(builder_, level_, marker_, null, result_, false, null);
+    marker_.rollbackTo();
+    result_ = exitErrorRecordingSection(builder_, level_, result_, false, _SECTION_NOT_, null);
     return result_;
   }
 
@@ -1322,9 +1687,14 @@ public class ThriftParser implements PsiParser {
   private static boolean functionsRecovery_0(PsiBuilder builder_, int level_) {
     if (!recursion_guard_(builder_, level_, "functionsRecovery_0")) return false;
     boolean result_ = false;
-    Marker marker_ = enter_section_(builder_);
+    Marker marker_ = builder_.mark();
     result_ = consumeToken(builder_, RIGHTCURLYBRACE);
-    exit_section_(builder_, marker_, null, result_);
+    if (!result_) {
+      marker_.rollbackTo();
+    }
+    else {
+      marker_.drop();
+    }
     return result_;
   }
 
@@ -1334,11 +1704,18 @@ public class ThriftParser implements PsiParser {
     if (!recursion_guard_(builder_, level_, "php_namespace")) return false;
     boolean result_ = false;
     boolean pinned_ = false;
-    Marker marker_ = enter_section_(builder_, level_, _NONE_, null);
+    Marker marker_ = builder_.mark();
+    enterErrorRecordingSection(builder_, level_, _SECTION_GENERAL_, null);
     result_ = consumeToken(builder_, "php_namespace");
     pinned_ = result_; // pin = 1
     result_ = result_ && consumeToken(builder_, LITERAL);
-    exit_section_(builder_, level_, marker_, null, result_, pinned_, null);
+    if (!result_ && !pinned_) {
+      marker_.rollbackTo();
+    }
+    else {
+      marker_.drop();
+    }
+    result_ = exitErrorRecordingSection(builder_, level_, result_, pinned_, _SECTION_GENERAL_, null);
     return result_ || pinned_;
   }
 
@@ -1346,11 +1723,17 @@ public class ThriftParser implements PsiParser {
   // Literal ListSeparator?
   public static boolean semunField(PsiBuilder builder_, int level_) {
     if (!recursion_guard_(builder_, level_, "semunField")) return false;
+    if (!nextTokenIs(builder_, LITERAL)) return false;
     boolean result_ = false;
-    Marker marker_ = enter_section_(builder_, level_, _NONE_, "<semun field>");
+    Marker marker_ = builder_.mark();
     result_ = consumeToken(builder_, LITERAL);
     result_ = result_ && semunField_1(builder_, level_ + 1);
-    exit_section_(builder_, level_, marker_, SEMUN_FIELD, result_, false, semunFieldRecovery_parser_);
+    if (result_) {
+      marker_.done(SEMUN_FIELD);
+    }
+    else {
+      marker_.rollbackTo();
+    }
     return result_;
   }
 
@@ -1366,9 +1749,11 @@ public class ThriftParser implements PsiParser {
   static boolean semunFieldRecovery(PsiBuilder builder_, int level_) {
     if (!recursion_guard_(builder_, level_, "semunFieldRecovery")) return false;
     boolean result_ = false;
-    Marker marker_ = enter_section_(builder_, level_, _NOT_, null);
+    Marker marker_ = builder_.mark();
+    enterErrorRecordingSection(builder_, level_, _SECTION_NOT_, null);
     result_ = !semunFieldRecovery_0(builder_, level_ + 1);
-    exit_section_(builder_, level_, marker_, null, result_, false, null);
+    marker_.rollbackTo();
+    result_ = exitErrorRecordingSection(builder_, level_, result_, false, _SECTION_NOT_, null);
     return result_;
   }
 
@@ -1376,10 +1761,15 @@ public class ThriftParser implements PsiParser {
   private static boolean semunFieldRecovery_0(PsiBuilder builder_, int level_) {
     if (!recursion_guard_(builder_, level_, "semunFieldRecovery_0")) return false;
     boolean result_ = false;
-    Marker marker_ = enter_section_(builder_);
+    Marker marker_ = builder_.mark();
     result_ = consumeToken(builder_, RIGHTCURLYBRACE);
     if (!result_) result_ = consumeToken(builder_, LITERAL);
-    exit_section_(builder_, marker_, null, result_);
+    if (!result_) {
+      marker_.rollbackTo();
+    }
+    else {
+      marker_.drop();
+    }
     return result_;
   }
 
@@ -1387,14 +1777,20 @@ public class ThriftParser implements PsiParser {
   // semunField*
   public static boolean senumBody(PsiBuilder builder_, int level_) {
     if (!recursion_guard_(builder_, level_, "senumBody")) return false;
-    Marker marker_ = enter_section_(builder_, level_, _NONE_, "<senum body>");
-    int pos_ = current_position_(builder_);
+    Marker marker_ = builder_.mark();
+    enterErrorRecordingSection(builder_, level_, _SECTION_GENERAL_, "<senum body>");
+    int offset_ = builder_.getCurrentOffset();
     while (true) {
       if (!semunField(builder_, level_ + 1)) break;
-      if (!empty_element_parsed_guard_(builder_, "senumBody", pos_)) break;
-      pos_ = current_position_(builder_);
+      int next_offset_ = builder_.getCurrentOffset();
+      if (offset_ == next_offset_) {
+        empty_element_parsed_guard_(builder_, offset_, "senumBody");
+        break;
+      }
+      offset_ = next_offset_;
     }
-    exit_section_(builder_, level_, marker_, SENUM_BODY, true, false, null);
+    marker_.done(SENUM_BODY);
+    exitErrorRecordingSection(builder_, level_, true, false, _SECTION_GENERAL_, null);
     return true;
   }
 
@@ -1402,14 +1798,20 @@ public class ThriftParser implements PsiParser {
   // (Function ListSeparator?)*
   public static boolean serviceBody(PsiBuilder builder_, int level_) {
     if (!recursion_guard_(builder_, level_, "serviceBody")) return false;
-    Marker marker_ = enter_section_(builder_, level_, _NONE_, "<service body>");
-    int pos_ = current_position_(builder_);
+    Marker marker_ = builder_.mark();
+    enterErrorRecordingSection(builder_, level_, _SECTION_GENERAL_, "<service body>");
+    int offset_ = builder_.getCurrentOffset();
     while (true) {
       if (!serviceBody_0(builder_, level_ + 1)) break;
-      if (!empty_element_parsed_guard_(builder_, "serviceBody", pos_)) break;
-      pos_ = current_position_(builder_);
+      int next_offset_ = builder_.getCurrentOffset();
+      if (offset_ == next_offset_) {
+        empty_element_parsed_guard_(builder_, offset_, "serviceBody");
+        break;
+      }
+      offset_ = next_offset_;
     }
-    exit_section_(builder_, level_, marker_, SERVICE_BODY, true, false, functionsRecovery_parser_);
+    marker_.done(SERVICE_BODY);
+    exitErrorRecordingSection(builder_, level_, true, false, _SECTION_GENERAL_, null);
     return true;
   }
 
@@ -1417,10 +1819,15 @@ public class ThriftParser implements PsiParser {
   private static boolean serviceBody_0(PsiBuilder builder_, int level_) {
     if (!recursion_guard_(builder_, level_, "serviceBody_0")) return false;
     boolean result_ = false;
-    Marker marker_ = enter_section_(builder_);
+    Marker marker_ = builder_.mark();
     result_ = Function(builder_, level_ + 1);
     result_ = result_ && serviceBody_0_1(builder_, level_ + 1);
-    exit_section_(builder_, marker_, null, result_);
+    if (!result_) {
+      marker_.rollbackTo();
+    }
+    else {
+      marker_.drop();
+    }
     return result_;
   }
 
@@ -1441,11 +1848,18 @@ public class ThriftParser implements PsiParser {
     if (!recursion_guard_(builder_, level_, "std_namespace")) return false;
     boolean result_ = false;
     boolean pinned_ = false;
-    Marker marker_ = enter_section_(builder_, level_, _NONE_, null);
+    Marker marker_ = builder_.mark();
+    enterErrorRecordingSection(builder_, level_, _SECTION_GENERAL_, null);
     result_ = consumeToken(builder_, "namespace");
     pinned_ = result_; // pin = 1
     result_ = result_ && std_namespace_1(builder_, level_ + 1);
-    exit_section_(builder_, level_, marker_, null, result_, pinned_, null);
+    if (!result_ && !pinned_) {
+      marker_.rollbackTo();
+    }
+    else {
+      marker_.drop();
+    }
+    result_ = exitErrorRecordingSection(builder_, level_, result_, pinned_, _SECTION_GENERAL_, null);
     return result_ || pinned_;
   }
 
@@ -1455,11 +1869,16 @@ public class ThriftParser implements PsiParser {
   private static boolean std_namespace_1(PsiBuilder builder_, int level_) {
     if (!recursion_guard_(builder_, level_, "std_namespace_1")) return false;
     boolean result_ = false;
-    Marker marker_ = enter_section_(builder_);
+    Marker marker_ = builder_.mark();
     result_ = std_namespace_1_0(builder_, level_ + 1);
     if (!result_) result_ = std_namespace_1_1(builder_, level_ + 1);
     if (!result_) result_ = std_namespace_1_2(builder_, level_ + 1);
-    exit_section_(builder_, marker_, null, result_);
+    if (!result_) {
+      marker_.rollbackTo();
+    }
+    else {
+      marker_.drop();
+    }
     return result_;
   }
 
@@ -1467,10 +1886,15 @@ public class ThriftParser implements PsiParser {
   private static boolean std_namespace_1_0(PsiBuilder builder_, int level_) {
     if (!recursion_guard_(builder_, level_, "std_namespace_1_0")) return false;
     boolean result_ = false;
-    Marker marker_ = enter_section_(builder_);
+    Marker marker_ = builder_.mark();
     result_ = NamespaceScope(builder_, level_ + 1);
     result_ = result_ && consumeToken(builder_, IDENTIFIER);
-    exit_section_(builder_, marker_, null, result_);
+    if (!result_) {
+      marker_.rollbackTo();
+    }
+    else {
+      marker_.drop();
+    }
     return result_;
   }
 
@@ -1478,10 +1902,15 @@ public class ThriftParser implements PsiParser {
   private static boolean std_namespace_1_1(PsiBuilder builder_, int level_) {
     if (!recursion_guard_(builder_, level_, "std_namespace_1_1")) return false;
     boolean result_ = false;
-    Marker marker_ = enter_section_(builder_);
+    Marker marker_ = builder_.mark();
     result_ = consumeToken(builder_, "smalltalk.category");
     result_ = result_ && consumeToken(builder_, STIDENTIFIER);
-    exit_section_(builder_, marker_, null, result_);
+    if (!result_) {
+      marker_.rollbackTo();
+    }
+    else {
+      marker_.drop();
+    }
     return result_;
   }
 
@@ -1489,10 +1918,15 @@ public class ThriftParser implements PsiParser {
   private static boolean std_namespace_1_2(PsiBuilder builder_, int level_) {
     if (!recursion_guard_(builder_, level_, "std_namespace_1_2")) return false;
     boolean result_ = false;
-    Marker marker_ = enter_section_(builder_);
+    Marker marker_ = builder_.mark();
     result_ = consumeToken(builder_, "smalltalk.prefix");
     result_ = result_ && consumeToken(builder_, IDENTIFIER);
-    exit_section_(builder_, marker_, null, result_);
+    if (!result_) {
+      marker_.rollbackTo();
+    }
+    else {
+      marker_.drop();
+    }
     return result_;
   }
 
@@ -1502,7 +1936,7 @@ public class ThriftParser implements PsiParser {
   static boolean topLevelElement(PsiBuilder builder_, int level_) {
     if (!recursion_guard_(builder_, level_, "topLevelElement")) return false;
     boolean result_ = false;
-    Marker marker_ = enter_section_(builder_, level_, _NONE_, null);
+    Marker marker_ = builder_.mark();
     result_ = Include(builder_, level_ + 1);
     if (!result_) result_ = Namespace(builder_, level_ + 1);
     if (!result_) result_ = Const(builder_, level_ + 1);
@@ -1513,7 +1947,12 @@ public class ThriftParser implements PsiParser {
     if (!result_) result_ = Union(builder_, level_ + 1);
     if (!result_) result_ = Exception(builder_, level_ + 1);
     if (!result_) result_ = Service(builder_, level_ + 1);
-    exit_section_(builder_, level_, marker_, null, result_, false, topLevelRecover_parser_);
+    if (!result_) {
+      marker_.rollbackTo();
+    }
+    else {
+      marker_.drop();
+    }
     return result_;
   }
 
@@ -1524,9 +1963,11 @@ public class ThriftParser implements PsiParser {
   static boolean topLevelRecover(PsiBuilder builder_, int level_) {
     if (!recursion_guard_(builder_, level_, "topLevelRecover")) return false;
     boolean result_ = false;
-    Marker marker_ = enter_section_(builder_, level_, _NOT_, null);
+    Marker marker_ = builder_.mark();
+    enterErrorRecordingSection(builder_, level_, _SECTION_NOT_, null);
     result_ = !topLevelRecover_0(builder_, level_ + 1);
-    exit_section_(builder_, level_, marker_, null, result_, false, null);
+    marker_.rollbackTo();
+    result_ = exitErrorRecordingSection(builder_, level_, result_, false, _SECTION_NOT_, null);
     return result_;
   }
 
@@ -1536,7 +1977,7 @@ public class ThriftParser implements PsiParser {
   private static boolean topLevelRecover_0(PsiBuilder builder_, int level_) {
     if (!recursion_guard_(builder_, level_, "topLevelRecover_0")) return false;
     boolean result_ = false;
-    Marker marker_ = enter_section_(builder_);
+    Marker marker_ = builder_.mark();
     result_ = consumeToken(builder_, "const");
     if (!result_) result_ = consumeToken(builder_, "cpp_include");
     if (!result_) result_ = consumeToken(builder_, "enum");
@@ -1550,7 +1991,12 @@ public class ThriftParser implements PsiParser {
     if (!result_) result_ = consumeToken(builder_, "typedef");
     if (!result_) result_ = consumeToken(builder_, "union");
     if (!result_) result_ = consumeToken(builder_, "xsd_namespace");
-    exit_section_(builder_, marker_, null, result_);
+    if (!result_) {
+      marker_.rollbackTo();
+    }
+    else {
+      marker_.drop();
+    }
     return result_;
   }
 
@@ -1560,52 +2006,19 @@ public class ThriftParser implements PsiParser {
     if (!recursion_guard_(builder_, level_, "xsd_namespace")) return false;
     boolean result_ = false;
     boolean pinned_ = false;
-    Marker marker_ = enter_section_(builder_, level_, _NONE_, null);
+    Marker marker_ = builder_.mark();
+    enterErrorRecordingSection(builder_, level_, _SECTION_GENERAL_, null);
     result_ = consumeToken(builder_, "xsd_namespace");
     pinned_ = result_; // pin = 1
     result_ = result_ && consumeToken(builder_, LITERAL);
-    exit_section_(builder_, level_, marker_, null, result_, pinned_, null);
+    if (!result_ && !pinned_) {
+      marker_.rollbackTo();
+    }
+    else {
+      marker_.drop();
+    }
+    result_ = exitErrorRecordingSection(builder_, level_, result_, pinned_, _SECTION_GENERAL_, null);
     return result_ || pinned_;
   }
 
-  final static Parser braceRecovery_parser_ = new Parser() {
-    public boolean parse(PsiBuilder builder_, int level_) {
-      return braceRecovery(builder_, level_ + 1);
-    }
-  };
-  final static Parser curlyBraceRecovery_parser_ = new Parser() {
-    public boolean parse(PsiBuilder builder_, int level_) {
-      return curlyBraceRecovery(builder_, level_ + 1);
-    }
-  };
-  final static Parser enumFieldRecovery_parser_ = new Parser() {
-    public boolean parse(PsiBuilder builder_, int level_) {
-      return enumFieldRecovery(builder_, level_ + 1);
-    }
-  };
-  final static Parser fieldRecovery_parser_ = new Parser() {
-    public boolean parse(PsiBuilder builder_, int level_) {
-      return fieldRecovery(builder_, level_ + 1);
-    }
-  };
-  final static Parser functionRecovery_parser_ = new Parser() {
-    public boolean parse(PsiBuilder builder_, int level_) {
-      return functionRecovery(builder_, level_ + 1);
-    }
-  };
-  final static Parser functionsRecovery_parser_ = new Parser() {
-    public boolean parse(PsiBuilder builder_, int level_) {
-      return functionsRecovery(builder_, level_ + 1);
-    }
-  };
-  final static Parser semunFieldRecovery_parser_ = new Parser() {
-    public boolean parse(PsiBuilder builder_, int level_) {
-      return semunFieldRecovery(builder_, level_ + 1);
-    }
-  };
-  final static Parser topLevelRecover_parser_ = new Parser() {
-    public boolean parse(PsiBuilder builder_, int level_) {
-      return topLevelRecover(builder_, level_ + 1);
-    }
-  };
 }

@@ -17,11 +17,6 @@ public class ThriftFieldImpl extends AbstractThriftDeclaration implements Thrift
     super(node);
   }
 
-  public void accept(@NotNull PsiElementVisitor visitor) {
-    if (visitor instanceof ThriftVisitor) ((ThriftVisitor)visitor).visitField(this);
-    else super.accept(visitor);
-  }
-
   @Override
   @Nullable
   public ThriftConstValue getConstValue() {
@@ -68,6 +63,11 @@ public class ThriftFieldImpl extends AbstractThriftDeclaration implements Thrift
   @Nullable
   public ThriftXsdFieldOptions getXsdFieldOptions() {
     return findChildByClass(ThriftXsdFieldOptions.class);
+  }
+
+  public void accept(@NotNull PsiElementVisitor visitor) {
+    if (visitor instanceof ThriftVisitor) ((ThriftVisitor)visitor).visitField(this);
+    else super.accept(visitor);
   }
 
 }

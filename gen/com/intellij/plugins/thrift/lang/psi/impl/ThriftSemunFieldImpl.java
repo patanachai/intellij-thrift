@@ -17,21 +17,15 @@ public class ThriftSemunFieldImpl extends ThriftPsiCompositeElementImpl implemen
     super(node);
   }
 
-  public void accept(@NotNull PsiElementVisitor visitor) {
-    if (visitor instanceof ThriftVisitor) ((ThriftVisitor)visitor).visitSemunField(this);
-    else super.accept(visitor);
-  }
-
   @Override
   @Nullable
   public ThriftListSeparator getListSeparator() {
     return findChildByClass(ThriftListSeparator.class);
   }
 
-  @Override
-  @NotNull
-  public PsiElement getLiteral() {
-    return findNotNullChildByType(LITERAL);
+  public void accept(@NotNull PsiElementVisitor visitor) {
+    if (visitor instanceof ThriftVisitor) ((ThriftVisitor)visitor).visitSemunField(this);
+    else super.accept(visitor);
   }
 
 }

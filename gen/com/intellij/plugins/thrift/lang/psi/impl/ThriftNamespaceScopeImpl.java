@@ -22,10 +22,4 @@ public class ThriftNamespaceScopeImpl extends ThriftPsiCompositeElementImpl impl
     else super.accept(visitor);
   }
 
-  @Override
-  @Nullable
-  public PsiElement getMultiply() {
-    return findChildByType(MULTIPLY);
-  }
-
 }

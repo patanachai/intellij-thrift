@@ -17,15 +17,15 @@ public class ThriftFieldIDImpl extends ThriftPsiCompositeElementImpl implements 
     super(node);
   }
 
-  public void accept(@NotNull PsiElementVisitor visitor) {
-    if (visitor instanceof ThriftVisitor) ((ThriftVisitor)visitor).visitFieldID(this);
-    else super.accept(visitor);
-  }
-
   @Override
   @NotNull
   public ThriftIntConstant getIntConstant() {
     return findNotNullChildByClass(ThriftIntConstant.class);
+  }
+
+  public void accept(@NotNull PsiElementVisitor visitor) {
+    if (visitor instanceof ThriftVisitor) ((ThriftVisitor)visitor).visitFieldID(this);
+    else super.accept(visitor);
   }
 
 }

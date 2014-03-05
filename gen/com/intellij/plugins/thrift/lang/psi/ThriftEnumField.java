@@ -16,7 +16,4 @@ public interface ThriftEnumField extends ThriftPsiCompositeElement {
   @Nullable
   ThriftTypeAnnotations getTypeAnnotations();
 
-  @NotNull
-  PsiElement getIdentifier();
-
 }

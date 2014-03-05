@@ -17,11 +17,6 @@ public class ThriftTypedefImpl extends ThriftTopLevelDeclarationImpl implements 
     super(node);
   }
 
-  public void accept(@NotNull PsiElementVisitor visitor) {
-    if (visitor instanceof ThriftVisitor) ((ThriftVisitor)visitor).visitTypedef(this);
-    else super.accept(visitor);
-  }
-
   @Override
   @Nullable
   public ThriftDefinitionName getDefinitionName() {
@@ -38,6 +33,11 @@ public class ThriftTypedefImpl extends ThriftTopLevelDeclarationImpl implements 
   @Nullable
   public ThriftTypeAnnotations getTypeAnnotations() {
     return findChildByClass(ThriftTypeAnnotations.class);
+  }
+
+  public void accept(@NotNull PsiElementVisitor visitor) {
+    if (visitor instanceof ThriftVisitor) ((ThriftVisitor)visitor).visitTypedef(this);
+    else super.accept(visitor);
   }
 
 }

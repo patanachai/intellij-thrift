@@ -17,11 +17,6 @@ public class ThriftServiceBodyImpl extends ThriftPsiCompositeElementImpl impleme
     super(node);
   }
 
-  public void accept(@NotNull PsiElementVisitor visitor) {
-    if (visitor instanceof ThriftVisitor) ((ThriftVisitor)visitor).visitServiceBody(this);
-    else super.accept(visitor);
-  }
-
   @Override
   @NotNull
   public List<ThriftFunction> getFunctionList() {
@@ -32,6 +27,11 @@ public class ThriftServiceBodyImpl extends ThriftPsiCompositeElementImpl impleme
   @NotNull
   public List<ThriftListSeparator> getListSeparatorList() {
     return PsiTreeUtil.getChildrenOfTypeAsList(this, ThriftListSeparator.class);
+  }
+
+  public void accept(@NotNull PsiElementVisitor visitor) {
+    if (visitor instanceof ThriftVisitor) ((ThriftVisitor)visitor).visitServiceBody(this);
+    else super.accept(visitor);
   }
 
 }

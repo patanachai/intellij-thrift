@@ -9,9 +9,6 @@ import com.intellij.psi.PsiReference;
 public interface ThriftCustomType extends ThriftPsiCompositeElement {
 
   @NotNull
-  PsiElement getIdentifier();
-
-  @NotNull
   PsiReference[] getReferences();
 
 }

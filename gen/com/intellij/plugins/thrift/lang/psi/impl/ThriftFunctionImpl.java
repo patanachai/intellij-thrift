@@ -17,11 +17,6 @@ public class ThriftFunctionImpl extends AbstractThriftDeclaration implements Thr
     super(node);
   }
 
-  public void accept(@NotNull PsiElementVisitor visitor) {
-    if (visitor instanceof ThriftVisitor) ((ThriftVisitor)visitor).visitFunction(this);
-    else super.accept(visitor);
-  }
-
   @Override
   @NotNull
   public ThriftDefinitionName getDefinitionName() {
@@ -50,6 +45,11 @@ public class ThriftFunctionImpl extends AbstractThriftDeclaration implements Thr
   @Nullable
   public ThriftTypeAnnotations getTypeAnnotations() {
     return findChildByClass(ThriftTypeAnnotations.class);
+  }
+
+  public void accept(@NotNull PsiElementVisitor visitor) {
+    if (visitor instanceof ThriftVisitor) ((ThriftVisitor)visitor).visitFunction(this);
+    else super.accept(visitor);
   }
 
 }

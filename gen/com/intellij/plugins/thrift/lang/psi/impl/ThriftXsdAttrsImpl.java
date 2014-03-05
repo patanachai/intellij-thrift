@@ -17,15 +17,15 @@ public class ThriftXsdAttrsImpl extends ThriftPsiCompositeElementImpl implements
     super(node);
   }
 
-  public void accept(@NotNull PsiElementVisitor visitor) {
-    if (visitor instanceof ThriftVisitor) ((ThriftVisitor)visitor).visitXsdAttrs(this);
-    else super.accept(visitor);
-  }
-
   @Override
   @Nullable
   public ThriftFields getFields() {
     return findChildByClass(ThriftFields.class);
+  }
+
+  public void accept(@NotNull PsiElementVisitor visitor) {
+    if (visitor instanceof ThriftVisitor) ((ThriftVisitor)visitor).visitXsdAttrs(this);
+    else super.accept(visitor);
   }
 
 }

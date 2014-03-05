@@ -7,7 +7,4 @@ import com.intellij.psi.PsiElement;
 
 public interface ThriftNamespaceScope extends ThriftPsiCompositeElement {
 
-  @Nullable
-  PsiElement getMultiply();
-
 }

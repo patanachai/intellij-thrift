@@ -17,11 +17,6 @@ public class ThriftConstImpl extends ThriftTopLevelDeclarationImpl implements Th
     super(node);
   }
 
-  public void accept(@NotNull PsiElementVisitor visitor) {
-    if (visitor instanceof ThriftVisitor) ((ThriftVisitor)visitor).visitConst(this);
-    else super.accept(visitor);
-  }
-
   @Override
   @Nullable
   public ThriftConstValue getConstValue() {
@@ -44,6 +39,11 @@ public class ThriftConstImpl extends ThriftTopLevelDeclarationImpl implements Th
   @Nullable
   public ThriftListSeparator getListSeparator() {
     return findChildByClass(ThriftListSeparator.class);
+  }
+
+  public void accept(@NotNull PsiElementVisitor visitor) {
+    if (visitor instanceof ThriftVisitor) ((ThriftVisitor)visitor).visitConst(this);
+    else super.accept(visitor);
   }
 
 }

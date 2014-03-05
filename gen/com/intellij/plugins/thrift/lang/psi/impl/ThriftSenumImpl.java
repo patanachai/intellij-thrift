@@ -17,11 +17,6 @@ public class ThriftSenumImpl extends ThriftTopLevelDeclarationImpl implements Th
     super(node);
   }
 
-  public void accept(@NotNull PsiElementVisitor visitor) {
-    if (visitor instanceof ThriftVisitor) ((ThriftVisitor)visitor).visitSenum(this);
-    else super.accept(visitor);
-  }
-
   @Override
   @Nullable
   public ThriftDefinitionName getDefinitionName() {
@@ -38,6 +33,11 @@ public class ThriftSenumImpl extends ThriftTopLevelDeclarationImpl implements Th
   @Nullable
   public ThriftSenumBody getSenumBody() {
     return findChildByClass(ThriftSenumBody.class);
+  }
+
+  public void accept(@NotNull PsiElementVisitor visitor) {
+    if (visitor instanceof ThriftVisitor) ((ThriftVisitor)visitor).visitSenum(this);
+    else super.accept(visitor);
   }
 
 }

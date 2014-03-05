@@ -19,10 +19,4 @@ public interface ThriftConstValue extends ThriftPsiCompositeElement {
   @Nullable
   ThriftIntConstant getIntConstant();
 
-  @Nullable
-  PsiElement getIdentifier();
-
-  @Nullable
-  PsiElement getLiteral();
-
 }

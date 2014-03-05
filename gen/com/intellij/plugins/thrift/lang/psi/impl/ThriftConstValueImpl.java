@@ -17,11 +17,6 @@ public class ThriftConstValueImpl extends ThriftPsiCompositeElementImpl implemen
     super(node);
   }
 
-  public void accept(@NotNull PsiElementVisitor visitor) {
-    if (visitor instanceof ThriftVisitor) ((ThriftVisitor)visitor).visitConstValue(this);
-    else super.accept(visitor);
-  }
-
   @Override
   @Nullable
   public ThriftConstList getConstList() {
@@ -46,16 +41,9 @@ public class ThriftConstValueImpl extends ThriftPsiCompositeElementImpl implemen
     return findChildByClass(ThriftIntConstant.class);
   }
 
-  @Override
-  @Nullable
-  public PsiElement getIdentifier() {
-    return findChildByType(IDENTIFIER);
-  }
-
-  @Override
-  @Nullable
-  public PsiElement getLiteral() {
-    return findChildByType(LITERAL);
+  public void accept(@NotNull PsiElementVisitor visitor) {
+    if (visitor instanceof ThriftVisitor) ((ThriftVisitor)visitor).visitConstValue(this);
+    else super.accept(visitor);
   }
 
 }

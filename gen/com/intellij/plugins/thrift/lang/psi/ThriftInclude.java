@@ -8,9 +8,6 @@ import com.intellij.psi.PsiReference;
 
 public interface ThriftInclude extends ThriftPsiCompositeElement {
 
-  @Nullable
-  PsiElement getLiteral();
-
   @NotNull
   PsiReference[] getReferences();
 

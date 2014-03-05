@@ -11,9 +11,6 @@ import  com.intellij.psi.PsiNameIdentifierOwner;
 public interface ThriftDefinitionName extends PsiNamedElement, NavigationItem, PsiNameIdentifierOwner {
 
   @NotNull
-  PsiElement getIdentifier();
-
-  @NotNull
   PsiElement setName(String name);
 
   @Nullable

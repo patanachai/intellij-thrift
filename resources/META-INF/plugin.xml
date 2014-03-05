@@ -51,7 +51,7 @@
   </change-notes>
   <version>0.8</version>
   <vendor>Twitter, Inc.</vendor>
-  <idea-version since-build="132.1"/>
+  <idea-version since-build="129.1"/>
 
   <application-components>
     <!-- Add your application components here -->
